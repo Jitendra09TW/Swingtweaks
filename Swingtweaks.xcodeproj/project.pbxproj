@@ -54,6 +54,7 @@
 		B7014235276B4CBC006E3951 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014234276B4CBC006E3951 /* ColorPickerViewController.swift */; };
 		B7014238276B4CC5006E3951 /* ToolPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014237276B4CC5006E3951 /* ToolPickerViewController.swift */; };
 		B7775FBF2768CF7200A1078E /* videoApp.mov in Resources */ = {isa = PBXBuildFile; fileRef = B7775FBE2768CF7200A1078E /* videoApp.mov */; };
+		B791DC432771A52C0067DAAB /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791DC422771A52C0067DAAB /* VideoEditor.swift */; };
 		B7DC0AF6276C985B007AE6CA /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DC0AF5276C985B007AE6CA /* Layout.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		B7014234276B4CBC006E3951 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		B7014237276B4CC5006E3951 /* ToolPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolPickerViewController.swift; sourceTree = "<group>"; };
 		B7775FBE2768CF7200A1078E /* videoApp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = videoApp.mov; sourceTree = "<group>"; };
+		B791DC422771A52C0067DAAB /* VideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
 		B7DC0AF5276C985B007AE6CA /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			children = (
 				869E9F43276A1B8500C820D6 /* MAKImageToVideo.swift */,
 				B7DC0AF5276C985B007AE6CA /* Layout.swift */,
+				B791DC422771A52C0067DAAB /* VideoEditor.swift */,
 				869E9F45276A231700C820D6 /* ImageToVideo.swift */,
 				B70141DF276B33B7006E3951 /* Drawsana */,
 			);
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7014230276B33B8006E3951 /* KeyedDecodingContainer+DrawsanaExtensions.swift in Sources */,
+				B791DC432771A52C0067DAAB /* VideoEditor.swift in Sources */,
 				B7014231276B33B8006E3951 /* ImmediatePanGestureRecognizer.swift in Sources */,
 				B701422B276B33B8006E3951 /* DrawsanaUtilities.swift in Sources */,
 				B701422D276B33B8006E3951 /* CGFloat+DrawsanaExtensions.swift in Sources */,

@@ -10,6 +10,10 @@ import AVFoundation
 import AVKit
 import Foundation
 import QuickLook
+import Photos
+
+
+
 struct Constants {
   static let colors: [UIColor?] = [
     .black,
@@ -39,10 +43,7 @@ class CreateTweakViewController: UIViewController {
     @IBOutlet weak var btnZoom:UIButton!
     @IBOutlet weak var btnColor:UIButton!
     @IBOutlet weak var btnEraser:UIButton!
-    @IBOutlet weak var imgFrames:UIImageView!
     @IBOutlet weak var imgView:UIView!
-    
-    @IBOutlet weak var imgDemo:UIImageView!
     
     
     var didReload:(([UIImage]) -> Void)?
@@ -71,11 +72,7 @@ class CreateTweakViewController: UIViewController {
       return drawingView
     }()
     
-    let strokeWidths: [CGFloat] = [
-      5,
-      10,
-      20,
-    ]
+    let strokeWidths: [CGFloat] = [5,10,20]
     var strokeWidthIndex = 0
     
     let imageView = UIImageView(image: UIImage(named: "download1"))
@@ -87,58 +84,65 @@ class CreateTweakViewController: UIViewController {
       EraserTool(),
     ] }()
     
-
+    
+    private let editor = VideoEditor()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        playLocalVideo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.getTotalFramesCount()
         self.getAllFramesArray()
+       // self.addImageOnVideo(videoURL: URL(string: urlVideo)!)
     }
     
-    func toolsSetup() {
-        
+    func addImageOnVideo(videoURL: URL) {
+        self.editor.makeBirthdayCard(fromVideoAt: videoURL, forName: "Jitu") { exportedURL in
+            print("exportedURLLLL", exportedURL)
+            self.saveVideoToPhotos(newVideoURL: exportedURL!)
+        }
+    }
+    
+    func saveVideoToPhotos(newVideoURL: URL) {
+        PHPhotoLibrary.shared().performChanges( {
+          PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: newVideoURL)
+        }) { [weak self] (isSaved, error) in
+          if isSaved {
+            print("Video saved.")
+          } else {
+            print("Cannot save video.")
+            print(error ?? "unknown error")
+          }
+          DispatchQueue.main.async {
+            self?.navigationController?.popViewController(animated: true)
+          }
+        }
+    }
+    
+    
+    func toolsSetup(toolIndex: Int) {
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
-        view.addSubview(imageView) { $0.center() }
+       // view.addSubview(imageView) { $0.center().height(220).width(500) }
         view.addSubview(drawingView)
-        
-//        imageView.contentMode = .scaleAspectFit
-//        drawingView.addSubview(imageView) { $0.center().height(500).width(500) }
-        
-       // view.addSubview(drawingView)
-       // drawingView.addSubview(imgFrames)
-        
+
         Drawing.debugSerialization = true
-        drawingView.set(tool: tools[2])
-       // drawingView.backgroundColor = .blue
-        drawingView.userSettings.strokeColor = Constants.colors[2]!
+        drawingView.set(tool: tools[toolIndex])
+        imgView.backgroundColor = .black
+        drawingView.backgroundColor = .clear
+        drawingView.userSettings.strokeColor = Constants.colors.first!
         drawingView.userSettings.fillColor = Constants.colors.last!
         drawingView.userSettings.strokeWidth = strokeWidths[strokeWidthIndex]
         drawingView.userSettings.fontName = "Marker Felt"
        
         drawingView.translatesAutoresizingMaskIntoConstraints = false
-        imgFrames.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        drawingView.applyConstraints { $0.center().height(220).width(500) }
-       // imgFrames.applyConstraints{ $0.center().height(220).width(500) }
-        
-        
-       // let imageAspectRatio = imgFrames.image?.size.width ?? 200 / (imgFrames.image?.size.height)! ?? 200
-
-//        NSLayoutConstraint.activate([
-//            drawingView.centerXAnchor.constraint(equalTo: imgFrames.centerXAnchor),
-//            drawingView.centerYAnchor.constraint(equalTo: imgFrames.centerYAnchor),
-//            drawingView.widthAnchor.constraint(lessThanOrEqualTo: imgFrames.widthAnchor),
-//            drawingView.heightAnchor.constraint(lessThanOrEqualTo: imgFrames.heightAnchor),
-//            drawingView.widthAnchor.constraint(equalTo: drawingView.heightAnchor, multiplier: 3),
-//            drawingView.widthAnchor.constraint(equalTo: imgFrames.widthAnchor).withPriority(.defaultLow),
-//            drawingView.heightAnchor.constraint(equalTo: imgFrames.heightAnchor).withPriority(.defaultLow)
-//
-//            ])
+        drawingView.applyConstraints { $0.width(self.videoView.frame.width).leading(self.videoView.frame.minX).height(self.videoView.frame.height).trailing(self.videoView.frame.minY).top(100).bottom(-100) }
     }
 }
 
@@ -146,9 +150,8 @@ extension CreateTweakViewController{
     
     // Initial setup
    private func setup() {
-    self.imgFrames.isHidden = true
     self.imgView.isHidden = true
-        setVideo(url: URL(string: urlVideo)!)
+        //setVideo(url: URL(string: urlVideo)!)
         [btnBack, btnPlay, btnSpeed, btnRecord, btnLine, btnCircle, btnSquare, btnAnnotationShapes, btnZoom, btnColor, btnEraser ].forEach {
             $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
         }
@@ -177,22 +180,17 @@ extension CreateTweakViewController{
         player?.usesExternalPlaybackWhileExternalScreenIsActive = true
         self.videoView.addSubview((playerController?.view)!)
         playerController?.view.frame = CGRect(x: 0, y: 0, width: self.videoView.bounds.width, height: self.videoView.bounds.height)
+        //playerController?.view.backgroundColor = .green
         
     }
     
     func playLocalVideo() {
-        guard let path = Bundle.main.path(forResource: "fftg", ofType: "mov") else {
+        guard let path = Bundle.main.path(forResource: "videoApp", ofType: "mov") else {
             return
         }
         let videoURL = NSURL(fileURLWithPath: path)
-        
-        // Create an AVPlayer, passing it the local video url path
-        let player = AVPlayer(url: videoURL as URL)
-        let controller = AVPlayerViewController()
-        controller.player = player
-        present(controller, animated: true) {
-            player.play()
-        }
+        setVideo(url: videoURL as URL)
+        self.toolsSetup(toolIndex: 1)
     }
 }
 
@@ -247,8 +245,9 @@ extension CreateTweakViewController {
             self.btnPlay.isSelected = true //video playing
             self.imageView.isHidden = true
             self.videoView.isHidden = false
-            self.drawingView.isHidden = true
+            self.drawingView.isHidden = false
             self.imgView.isHidden = true
+            self.toolsSetup(toolIndex: 1)
             player?.play()
         }
     }
@@ -313,12 +312,10 @@ extension CreateTweakViewController {
         let time = self.player?.currentTime()
         do {
             let img = try assetImgGenerate.copyCGImage(at: time!, actualTime: nil)
-            //self.imgFrames.image = UIImage(cgImage: img)
-            self.imgFrames.contentMode = .scaleAspectFit
+            self.imageView.contentMode = .scaleAspectFit
             self.imageView.backgroundColor = .black
             self.imageView.image = UIImage(cgImage: img)
-            self.toolsSetup()
-            
+            self.toolsSetup(toolIndex: 0)
         } catch {
             print("Img error")
         }
@@ -331,24 +328,15 @@ extension CreateTweakViewController {
     }
     private func lineAction(sender: UIView) {
         print("pencilAction")
-        Drawing.debugSerialization = true
-        drawingView.set(tool: tools[0])
-        drawingView.userSettings.strokeColor = Constants.colors.first!
-        drawingView.userSettings.fillColor = Constants.colors.last!
-        drawingView.userSettings.strokeWidth = strokeWidths[strokeWidthIndex]
-        drawingView.userSettings.fontName = "Marker Felt"
-        drawingView.translatesAutoresizingMaskIntoConstraints = false
-        imgFrames.translatesAutoresizingMaskIntoConstraints = false
-        presentPopover(
-          ToolPickerViewController(tools: tools, delegate: self),
-          sourceView: sender)
-        
+        self.toolsSetup(toolIndex: 0) //pencil
     }
     private func circleAction() {
         print("circleAction")
+        self.toolsSetup(toolIndex: 1)
     }
     private func rectangleAction() {
         print("rectangleAction")
+        self.toolsSetup(toolIndex: 2)
     }
     private func AnnotationShapesAction() {
         print("AnnotationShapesAction")
@@ -361,6 +349,7 @@ extension CreateTweakViewController {
     }
     private func eraserAction() {
         print("eraserAction")
+        self.toolsSetup(toolIndex: 3)
     }
 }
 extension CreateTweakViewController: ColorPickerViewControllerDelegate {

@@ -298,18 +298,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc5-Kc-cO6">
                                 <rect key="frame" x="0.0" y="104" width="414" height="692"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NoQ-Hh-q8W">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="NoQ-Hh-q8W" firstAttribute="top" secondItem="nc5-Kc-cO6" secondAttribute="top" id="BNx-4Y-LhO"/>
-                                    <constraint firstAttribute="trailing" secondItem="NoQ-Hh-q8W" secondAttribute="trailing" id="VJ5-Ky-elM"/>
-                                    <constraint firstAttribute="bottom" secondItem="NoQ-Hh-q8W" secondAttribute="bottom" id="gax-YX-dUs"/>
-                                    <constraint firstItem="NoQ-Hh-q8W" firstAttribute="leading" secondItem="nc5-Kc-cO6" secondAttribute="leading" id="n5k-F8-w0Q"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-Op-UJn">
                                 <rect key="frame" x="0.0" y="104" width="414" height="692"/>
@@ -347,7 +336,6 @@
                         <outlet property="btnSpeed" destination="zP0-Wm-d81" id="QnR-ca-N5R"/>
                         <outlet property="btnSquare" destination="2Kf-HG-PAV" id="dVx-4b-RR9"/>
                         <outlet property="btnZoom" destination="oC5-ej-NbV" id="XmV-Fj-j1Y"/>
-                        <outlet property="imgFrames" destination="NoQ-Hh-q8W" id="54H-Kr-itI"/>
                         <outlet property="imgView" destination="nc5-Kc-cO6" id="grn-dN-M6L"/>
                         <outlet property="videoView" destination="JhW-Op-UJn" id="gtx-F6-Ops"/>
                     </connections>
