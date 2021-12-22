@@ -65,7 +65,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>will use library</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Need microphone access for uploading audios</string>
 </dict>
 </plist>

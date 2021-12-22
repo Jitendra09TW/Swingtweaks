@@ -7,8 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		869E9F44276A1B8500C820D6 /* MAKImageToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E9F43276A1B8500C820D6 /* MAKImageToVideo.swift */; };
-		869E9F46276A231800C820D6 /* ImageToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869E9F45276A231700C820D6 /* ImageToVideo.swift */; };
+		8884534327720163001E22B9 /* videoApp.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8884534227720163001E22B9 /* videoApp.mov */; };
+		8884537827720400001E22B9 /* DrawingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845348277203FF001E22B9 /* DrawingTool.swift */; };
+		8884537927720400001E22B9 /* DrawingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845349277203FF001E22B9 /* DrawingOperations.swift */; };
+		8884537A27720400001E22B9 /* SelectionTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884534B277203FF001E22B9 /* SelectionTool.swift */; };
+		8884537B27720400001E22B9 /* StarTool_PentagonTool_TriangleTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884534C277203FF001E22B9 /* StarTool_PentagonTool_TriangleTool.swift */; };
+		8884537C27720400001E22B9 /* AngleTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884534D277203FF001E22B9 /* AngleTool.swift */; };
+		8884537D27720400001E22B9 /* DragHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884534F277203FF001E22B9 /* DragHandler.swift */; };
+		8884537E27720400001E22B9 /* TextShapeEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845350277203FF001E22B9 /* TextShapeEditingView.swift */; };
+		8884537F27720400001E22B9 /* TextTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845351277203FF001E22B9 /* TextTool.swift */; };
+		8884538027720400001E22B9 /* PenTool_EraserTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845352277203FF001E22B9 /* PenTool_EraserTool.swift */; };
+		8884538127720400001E22B9 /* DrawingToolForShapeWithTwoPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845353277203FF001E22B9 /* DrawingToolForShapeWithTwoPoints.swift */; };
+		8884538227720400001E22B9 /* DrawingToolForShapeWithThreePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845354277203FF001E22B9 /* DrawingToolForShapeWithThreePoints.swift */; };
+		8884538327720400001E22B9 /* ArrowTool_EllipseTool_LineTool_RectTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845355277203FF001E22B9 /* ArrowTool_EllipseTool_LineTool_RectTool.swift */; };
+		8884538427720400001E22B9 /* ToolPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845356277203FF001E22B9 /* ToolPickerViewController.swift */; };
+		8884538527720400001E22B9 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845358277203FF001E22B9 /* Shape.swift */; };
+		8884538627720400001E22B9 /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845359277203FF001E22B9 /* ShapeTransform.swift */; };
+		8884538727720400001E22B9 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884535B277203FF001E22B9 /* LineShape.swift */; };
+		8884538827720400001E22B9 /* PenShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884535C277203FF001E22B9 /* PenShape.swift */; };
+		8884538927720400001E22B9 /* NgonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884535D277203FF001E22B9 /* NgonShape.swift */; };
+		8884538A27720400001E22B9 /* RectShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884535E277203FF001E22B9 /* RectShape.swift */; };
+		8884538B27720400001E22B9 /* TextShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884535F277203FF001E22B9 /* TextShape.swift */; };
+		8884538C27720400001E22B9 /* StarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845360277203FF001E22B9 /* StarShape.swift */; };
+		8884538D27720400001E22B9 /* EllipseShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845361277203FF001E22B9 /* EllipseShape.swift */; };
+		8884538E27720400001E22B9 /* AngleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845362277203FF001E22B9 /* AngleShape.swift */; };
+		8884539027720400001E22B9 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845366277203FF001E22B9 /* ColorPickerViewController.swift */; };
+		8884539127720400001E22B9 /* DrawsanaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845367277203FF001E22B9 /* DrawsanaView.swift */; };
+		8884539227720400001E22B9 /* DrawingOperationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884536927720400001E22B9 /* DrawingOperationStack.swift */; };
+		8884539327720400001E22B9 /* ToolSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884536A27720400001E22B9 /* ToolSettings.swift */; };
+		8884539427720400001E22B9 /* ToolOperationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884536B27720400001E22B9 /* ToolOperationContext.swift */; };
+		8884539527720400001E22B9 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884536C27720400001E22B9 /* UserSettings.swift */; };
+		8884539627720400001E22B9 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884536D27720400001E22B9 /* Drawing.swift */; };
+		8884539727720400001E22B9 /* DrawsanaUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884536F27720400001E22B9 /* DrawsanaUtilities.swift */; };
+		8884539827720400001E22B9 /* CGPoint+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537127720400001E22B9 /* CGPoint+DrawsanaExtensions.swift */; };
+		8884539927720400001E22B9 /* CGFloat+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537227720400001E22B9 /* CGFloat+DrawsanaExtensions.swift */; };
+		8884539A27720400001E22B9 /* CGRect+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537327720400001E22B9 /* CGRect+DrawsanaExtensions.swift */; };
+		8884539B27720400001E22B9 /* UIColor+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537427720400001E22B9 /* UIColor+DrawsanaExtensions.swift */; };
+		8884539C27720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537527720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift */; };
+		8884539D27720400001E22B9 /* ImmediatePanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537627720400001E22B9 /* ImmediatePanGestureRecognizer.swift */; };
+		8884539E27720400001E22B9 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537727720400001E22B9 /* Layout.swift */; };
+		889614EB2769C88E00D59E02 /* VideoUltilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889614EA2769C88D00D59E02 /* VideoUltilities.swift */; };
+		889614F0276A06F200D59E02 /* demoAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 889614EF276A06F200D59E02 /* demoAudio.mp3 */; };
 		88BF91902761CD1000488A15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF918F2761CD1000488A15 /* AppDelegate.swift */; };
 		88BF91922761CD1000488A15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF91912761CD1000488A15 /* SceneDelegate.swift */; };
 		88BF91942761CD1000488A15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF91932761CD1000488A15 /* ViewController.swift */; };
@@ -16,51 +55,61 @@
 		88BF91992761CD3A00488A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF91982761CD3A00488A15 /* Assets.xcassets */; };
 		88BF919C2761CD3A00488A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BF919A2761CD3A00488A15 /* LaunchScreen.storyboard */; };
 		88BF91AD2761D20600488A15 /* CreateTweakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF91AC2761D20600488A15 /* CreateTweakViewController.swift */; };
-		B701420E276B33B8006E3951 /* DrawingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141E1276B33B7006E3951 /* DrawingTool.swift */; };
-		B701420F276B33B8006E3951 /* DrawingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141E2276B33B7006E3951 /* DrawingOperations.swift */; };
-		B7014210276B33B8006E3951 /* SelectionTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141E4276B33B7006E3951 /* SelectionTool.swift */; };
-		B7014211276B33B8006E3951 /* StarTool_PentagonTool_TriangleTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141E5276B33B7006E3951 /* StarTool_PentagonTool_TriangleTool.swift */; };
-		B7014212276B33B8006E3951 /* AngleTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141E6276B33B8006E3951 /* AngleTool.swift */; };
-		B7014213276B33B8006E3951 /* DragHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141E8276B33B8006E3951 /* DragHandler.swift */; };
-		B7014214276B33B8006E3951 /* TextShapeEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141E9276B33B8006E3951 /* TextShapeEditingView.swift */; };
-		B7014215276B33B8006E3951 /* TextTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141EA276B33B8006E3951 /* TextTool.swift */; };
-		B7014216276B33B8006E3951 /* PenTool_EraserTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141EB276B33B8006E3951 /* PenTool_EraserTool.swift */; };
-		B7014217276B33B8006E3951 /* DrawingToolForShapeWithTwoPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141EC276B33B8006E3951 /* DrawingToolForShapeWithTwoPoints.swift */; };
-		B7014218276B33B8006E3951 /* DrawingToolForShapeWithThreePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141ED276B33B8006E3951 /* DrawingToolForShapeWithThreePoints.swift */; };
-		B7014219276B33B8006E3951 /* ArrowTool_EllipseTool_LineTool_RectTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141EE276B33B8006E3951 /* ArrowTool_EllipseTool_LineTool_RectTool.swift */; };
-		B701421A276B33B8006E3951 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F0276B33B8006E3951 /* Shape.swift */; };
-		B701421B276B33B8006E3951 /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F1276B33B8006E3951 /* ShapeTransform.swift */; };
-		B701421C276B33B8006E3951 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F3276B33B8006E3951 /* LineShape.swift */; };
-		B701421D276B33B8006E3951 /* PenShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F4276B33B8006E3951 /* PenShape.swift */; };
-		B701421E276B33B8006E3951 /* NgonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F5276B33B8006E3951 /* NgonShape.swift */; };
-		B701421F276B33B8006E3951 /* RectShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F6276B33B8006E3951 /* RectShape.swift */; };
-		B7014220276B33B8006E3951 /* TextShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F7276B33B8006E3951 /* TextShape.swift */; };
-		B7014221276B33B8006E3951 /* StarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F8276B33B8006E3951 /* StarShape.swift */; };
-		B7014222276B33B8006E3951 /* EllipseShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141F9276B33B8006E3951 /* EllipseShape.swift */; };
-		B7014223276B33B8006E3951 /* AngleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141FA276B33B8006E3951 /* AngleShape.swift */; };
-		B7014225276B33B8006E3951 /* DrawsanaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70141FE276B33B8006E3951 /* DrawsanaView.swift */; };
-		B7014226276B33B8006E3951 /* DrawingOperationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014200276B33B8006E3951 /* DrawingOperationStack.swift */; };
-		B7014227276B33B8006E3951 /* ToolSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014201276B33B8006E3951 /* ToolSettings.swift */; };
-		B7014228276B33B8006E3951 /* ToolOperationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014202276B33B8006E3951 /* ToolOperationContext.swift */; };
-		B7014229276B33B8006E3951 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014203276B33B8006E3951 /* UserSettings.swift */; };
-		B701422A276B33B8006E3951 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014204276B33B8006E3951 /* Drawing.swift */; };
-		B701422B276B33B8006E3951 /* DrawsanaUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014206276B33B8006E3951 /* DrawsanaUtilities.swift */; };
-		B701422C276B33B8006E3951 /* CGPoint+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014208276B33B8006E3951 /* CGPoint+DrawsanaExtensions.swift */; };
-		B701422D276B33B8006E3951 /* CGFloat+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014209276B33B8006E3951 /* CGFloat+DrawsanaExtensions.swift */; };
-		B701422E276B33B8006E3951 /* CGRect+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B701420A276B33B8006E3951 /* CGRect+DrawsanaExtensions.swift */; };
-		B701422F276B33B8006E3951 /* UIColor+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B701420B276B33B8006E3951 /* UIColor+DrawsanaExtensions.swift */; };
-		B7014230276B33B8006E3951 /* KeyedDecodingContainer+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B701420C276B33B8006E3951 /* KeyedDecodingContainer+DrawsanaExtensions.swift */; };
-		B7014231276B33B8006E3951 /* ImmediatePanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B701420D276B33B8006E3951 /* ImmediatePanGestureRecognizer.swift */; };
-		B7014235276B4CBC006E3951 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014234276B4CBC006E3951 /* ColorPickerViewController.swift */; };
-		B7014238276B4CC5006E3951 /* ToolPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7014237276B4CC5006E3951 /* ToolPickerViewController.swift */; };
-		B7775FBF2768CF7200A1078E /* videoApp.mov in Resources */ = {isa = PBXBuildFile; fileRef = B7775FBE2768CF7200A1078E /* videoApp.mov */; };
-		B791DC432771A52C0067DAAB /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791DC422771A52C0067DAAB /* VideoEditor.swift */; };
-		B7DC0AF6276C985B007AE6CA /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DC0AF5276C985B007AE6CA /* Layout.swift */; };
+		88F5A77227708CD6008E77ED /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F5A77127708CD6008E77ED /* AudioViewController.swift */; };
+		88F628E6276B2B4B0056A87D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 88F628DF276B2B4B0056A87D /* .gitkeep */; };
+		88F628E7276B2B4B0056A87D /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E0276B2B4B0056A87D /* VideoGenerator.swift */; };
+		88F628E8276B2B4B0056A87D /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E2276B2B4B0056A87D /* AVAssetExtension.swift */; };
+		88F628E9276B2B4B0056A87D /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E3276B2B4B0056A87D /* ImageExtension.swift */; };
+		88F628EA276B2B4B0056A87D /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E5276B2B4B0056A87D /* VideoGeneratorError.swift */; };
+		88F628ED276B2D060056A87D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628EC276B2D060056A87D /* LoadingView.swift */; };
+		88F628F2276B73090056A87D /* AGAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628F1276B73090056A87D /* AGAudioRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		869E9F43276A1B8500C820D6 /* MAKImageToVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAKImageToVideo.swift; sourceTree = "<group>"; };
-		869E9F45276A231700C820D6 /* ImageToVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToVideo.swift; sourceTree = "<group>"; };
+		887DFE292771BCCA001BF968 /* videoApp.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoApp.mp4; sourceTree = "<group>"; };
+		8884534227720163001E22B9 /* videoApp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = videoApp.mov; sourceTree = "<group>"; };
+		88845348277203FF001E22B9 /* DrawingTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingTool.swift; sourceTree = "<group>"; };
+		88845349277203FF001E22B9 /* DrawingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingOperations.swift; sourceTree = "<group>"; };
+		8884534B277203FF001E22B9 /* SelectionTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTool.swift; sourceTree = "<group>"; };
+		8884534C277203FF001E22B9 /* StarTool_PentagonTool_TriangleTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarTool_PentagonTool_TriangleTool.swift; sourceTree = "<group>"; };
+		8884534D277203FF001E22B9 /* AngleTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleTool.swift; sourceTree = "<group>"; };
+		8884534F277203FF001E22B9 /* DragHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragHandler.swift; sourceTree = "<group>"; };
+		88845350277203FF001E22B9 /* TextShapeEditingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextShapeEditingView.swift; sourceTree = "<group>"; };
+		88845351277203FF001E22B9 /* TextTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTool.swift; sourceTree = "<group>"; };
+		88845352277203FF001E22B9 /* PenTool_EraserTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenTool_EraserTool.swift; sourceTree = "<group>"; };
+		88845353277203FF001E22B9 /* DrawingToolForShapeWithTwoPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingToolForShapeWithTwoPoints.swift; sourceTree = "<group>"; };
+		88845354277203FF001E22B9 /* DrawingToolForShapeWithThreePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingToolForShapeWithThreePoints.swift; sourceTree = "<group>"; };
+		88845355277203FF001E22B9 /* ArrowTool_EllipseTool_LineTool_RectTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowTool_EllipseTool_LineTool_RectTool.swift; sourceTree = "<group>"; };
+		88845356277203FF001E22B9 /* ToolPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolPickerViewController.swift; sourceTree = "<group>"; };
+		88845358277203FF001E22B9 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		88845359277203FF001E22B9 /* ShapeTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeTransform.swift; sourceTree = "<group>"; };
+		8884535B277203FF001E22B9 /* LineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		8884535C277203FF001E22B9 /* PenShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenShape.swift; sourceTree = "<group>"; };
+		8884535D277203FF001E22B9 /* NgonShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NgonShape.swift; sourceTree = "<group>"; };
+		8884535E277203FF001E22B9 /* RectShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectShape.swift; sourceTree = "<group>"; };
+		8884535F277203FF001E22B9 /* TextShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextShape.swift; sourceTree = "<group>"; };
+		88845360277203FF001E22B9 /* StarShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarShape.swift; sourceTree = "<group>"; };
+		88845361277203FF001E22B9 /* EllipseShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipseShape.swift; sourceTree = "<group>"; };
+		88845362277203FF001E22B9 /* AngleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleShape.swift; sourceTree = "<group>"; };
+		88845364277203FF001E22B9 /* Drawsana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawsana.h; sourceTree = "<group>"; };
+		88845365277203FF001E22B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88845366277203FF001E22B9 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		88845367277203FF001E22B9 /* DrawsanaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawsanaView.swift; sourceTree = "<group>"; };
+		8884536927720400001E22B9 /* DrawingOperationStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingOperationStack.swift; sourceTree = "<group>"; };
+		8884536A27720400001E22B9 /* ToolSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolSettings.swift; sourceTree = "<group>"; };
+		8884536B27720400001E22B9 /* ToolOperationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolOperationContext.swift; sourceTree = "<group>"; };
+		8884536C27720400001E22B9 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		8884536D27720400001E22B9 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		8884536F27720400001E22B9 /* DrawsanaUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawsanaUtilities.swift; sourceTree = "<group>"; };
+		8884537127720400001E22B9 /* CGPoint+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
+		8884537227720400001E22B9 /* CGFloat+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
+		8884537327720400001E22B9 /* CGRect+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
+		8884537427720400001E22B9 /* UIColor+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
+		8884537527720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
+		8884537627720400001E22B9 /* ImmediatePanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmediatePanGestureRecognizer.swift; sourceTree = "<group>"; };
+		8884537727720400001E22B9 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		889614EA2769C88D00D59E02 /* VideoUltilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoUltilities.swift; sourceTree = "<group>"; };
+		889614EF276A06F200D59E02 /* demoAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = demoAudio.mp3; sourceTree = "<group>"; };
 		88BF918C2761CD1000488A15 /* Swingtweaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swingtweaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BF918F2761CD1000488A15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88BF91912761CD1000488A15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,48 +119,15 @@
 		88BF919B2761CD3A00488A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88BF919D2761CD3A00488A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Swingtweaks/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		88BF91AC2761D20600488A15 /* CreateTweakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweakViewController.swift; sourceTree = "<group>"; };
-		B70141E1276B33B7006E3951 /* DrawingTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingTool.swift; sourceTree = "<group>"; };
-		B70141E2276B33B7006E3951 /* DrawingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingOperations.swift; sourceTree = "<group>"; };
-		B70141E4276B33B7006E3951 /* SelectionTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTool.swift; sourceTree = "<group>"; };
-		B70141E5276B33B7006E3951 /* StarTool_PentagonTool_TriangleTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarTool_PentagonTool_TriangleTool.swift; sourceTree = "<group>"; };
-		B70141E6276B33B8006E3951 /* AngleTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleTool.swift; sourceTree = "<group>"; };
-		B70141E8276B33B8006E3951 /* DragHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragHandler.swift; sourceTree = "<group>"; };
-		B70141E9276B33B8006E3951 /* TextShapeEditingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextShapeEditingView.swift; sourceTree = "<group>"; };
-		B70141EA276B33B8006E3951 /* TextTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTool.swift; sourceTree = "<group>"; };
-		B70141EB276B33B8006E3951 /* PenTool_EraserTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenTool_EraserTool.swift; sourceTree = "<group>"; };
-		B70141EC276B33B8006E3951 /* DrawingToolForShapeWithTwoPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingToolForShapeWithTwoPoints.swift; sourceTree = "<group>"; };
-		B70141ED276B33B8006E3951 /* DrawingToolForShapeWithThreePoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingToolForShapeWithThreePoints.swift; sourceTree = "<group>"; };
-		B70141EE276B33B8006E3951 /* ArrowTool_EllipseTool_LineTool_RectTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowTool_EllipseTool_LineTool_RectTool.swift; sourceTree = "<group>"; };
-		B70141F0276B33B8006E3951 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
-		B70141F1276B33B8006E3951 /* ShapeTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeTransform.swift; sourceTree = "<group>"; };
-		B70141F3276B33B8006E3951 /* LineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
-		B70141F4276B33B8006E3951 /* PenShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PenShape.swift; sourceTree = "<group>"; };
-		B70141F5276B33B8006E3951 /* NgonShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NgonShape.swift; sourceTree = "<group>"; };
-		B70141F6276B33B8006E3951 /* RectShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectShape.swift; sourceTree = "<group>"; };
-		B70141F7276B33B8006E3951 /* TextShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextShape.swift; sourceTree = "<group>"; };
-		B70141F8276B33B8006E3951 /* StarShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarShape.swift; sourceTree = "<group>"; };
-		B70141F9276B33B8006E3951 /* EllipseShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipseShape.swift; sourceTree = "<group>"; };
-		B70141FA276B33B8006E3951 /* AngleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleShape.swift; sourceTree = "<group>"; };
-		B70141FC276B33B8006E3951 /* Drawsana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawsana.h; sourceTree = "<group>"; };
-		B70141FD276B33B8006E3951 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B70141FE276B33B8006E3951 /* DrawsanaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawsanaView.swift; sourceTree = "<group>"; };
-		B7014200276B33B8006E3951 /* DrawingOperationStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingOperationStack.swift; sourceTree = "<group>"; };
-		B7014201276B33B8006E3951 /* ToolSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolSettings.swift; sourceTree = "<group>"; };
-		B7014202276B33B8006E3951 /* ToolOperationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolOperationContext.swift; sourceTree = "<group>"; };
-		B7014203276B33B8006E3951 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		B7014204276B33B8006E3951 /* Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
-		B7014206276B33B8006E3951 /* DrawsanaUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawsanaUtilities.swift; sourceTree = "<group>"; };
-		B7014208276B33B8006E3951 /* CGPoint+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
-		B7014209276B33B8006E3951 /* CGFloat+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
-		B701420A276B33B8006E3951 /* CGRect+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
-		B701420B276B33B8006E3951 /* UIColor+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
-		B701420C276B33B8006E3951 /* KeyedDecodingContainer+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
-		B701420D276B33B8006E3951 /* ImmediatePanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmediatePanGestureRecognizer.swift; sourceTree = "<group>"; };
-		B7014234276B4CBC006E3951 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
-		B7014237276B4CC5006E3951 /* ToolPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolPickerViewController.swift; sourceTree = "<group>"; };
-		B7775FBE2768CF7200A1078E /* videoApp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = videoApp.mov; sourceTree = "<group>"; };
-		B791DC422771A52C0067DAAB /* VideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
-		B7DC0AF5276C985B007AE6CA /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		88F5A77127708CD6008E77ED /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		88F5A7742770B836008E77ED /* TempFile.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TempFile.m4a; sourceTree = "<group>"; };
+		88F628DF276B2B4B0056A87D /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		88F628E0276B2B4B0056A87D /* VideoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGenerator.swift; sourceTree = "<group>"; };
+		88F628E2276B2B4B0056A87D /* AVAssetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetExtension.swift; sourceTree = "<group>"; };
+		88F628E3276B2B4B0056A87D /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		88F628E5276B2B4B0056A87D /* VideoGeneratorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGeneratorError.swift; sourceTree = "<group>"; };
+		88F628EC276B2D060056A87D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		88F628F1276B73090056A87D /* AGAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAudioRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,16 +141,134 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		869E9F42276A1B6900C820D6 /* Utils */ = {
+		88845346277203FF001E22B9 /* Drawsana */ = {
 			isa = PBXGroup;
 			children = (
-				869E9F43276A1B8500C820D6 /* MAKImageToVideo.swift */,
-				B7DC0AF5276C985B007AE6CA /* Layout.swift */,
-				B791DC422771A52C0067DAAB /* VideoEditor.swift */,
-				869E9F45276A231700C820D6 /* ImageToVideo.swift */,
-				B70141DF276B33B7006E3951 /* Drawsana */,
+				88845347277203FF001E22B9 /* Tools */,
+				88845356277203FF001E22B9 /* ToolPickerViewController.swift */,
+				88845357277203FF001E22B9 /* Shapes */,
+				88845363277203FF001E22B9 /* _Support */,
+				88845366277203FF001E22B9 /* ColorPickerViewController.swift */,
+				88845367277203FF001E22B9 /* DrawsanaView.swift */,
+				88845368277203FF001E22B9 /* Data model */,
+				8884536E27720400001E22B9 /* Helpers */,
 			);
-			path = Utils;
+			path = Drawsana;
+			sourceTree = "<group>";
+		};
+		88845347277203FF001E22B9 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				88845348277203FF001E22B9 /* DrawingTool.swift */,
+				88845349277203FF001E22B9 /* DrawingOperations.swift */,
+				8884534A277203FF001E22B9 /* Implementations */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		8884534A277203FF001E22B9 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				8884534B277203FF001E22B9 /* SelectionTool.swift */,
+				8884534C277203FF001E22B9 /* StarTool_PentagonTool_TriangleTool.swift */,
+				8884534D277203FF001E22B9 /* AngleTool.swift */,
+				8884534E277203FF001E22B9 /* Text tool */,
+				88845352277203FF001E22B9 /* PenTool_EraserTool.swift */,
+				88845353277203FF001E22B9 /* DrawingToolForShapeWithTwoPoints.swift */,
+				88845354277203FF001E22B9 /* DrawingToolForShapeWithThreePoints.swift */,
+				88845355277203FF001E22B9 /* ArrowTool_EllipseTool_LineTool_RectTool.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		8884534E277203FF001E22B9 /* Text tool */ = {
+			isa = PBXGroup;
+			children = (
+				8884534F277203FF001E22B9 /* DragHandler.swift */,
+				88845350277203FF001E22B9 /* TextShapeEditingView.swift */,
+				88845351277203FF001E22B9 /* TextTool.swift */,
+			);
+			path = "Text tool";
+			sourceTree = "<group>";
+		};
+		88845357277203FF001E22B9 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				88845358277203FF001E22B9 /* Shape.swift */,
+				88845359277203FF001E22B9 /* ShapeTransform.swift */,
+				8884535A277203FF001E22B9 /* Implementations */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		8884535A277203FF001E22B9 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				8884535B277203FF001E22B9 /* LineShape.swift */,
+				8884535C277203FF001E22B9 /* PenShape.swift */,
+				8884535D277203FF001E22B9 /* NgonShape.swift */,
+				8884535E277203FF001E22B9 /* RectShape.swift */,
+				8884535F277203FF001E22B9 /* TextShape.swift */,
+				88845360277203FF001E22B9 /* StarShape.swift */,
+				88845361277203FF001E22B9 /* EllipseShape.swift */,
+				88845362277203FF001E22B9 /* AngleShape.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		88845363277203FF001E22B9 /* _Support */ = {
+			isa = PBXGroup;
+			children = (
+				88845364277203FF001E22B9 /* Drawsana.h */,
+				88845365277203FF001E22B9 /* Info.plist */,
+			);
+			path = _Support;
+			sourceTree = "<group>";
+		};
+		88845368277203FF001E22B9 /* Data model */ = {
+			isa = PBXGroup;
+			children = (
+				8884536927720400001E22B9 /* DrawingOperationStack.swift */,
+				8884536A27720400001E22B9 /* ToolSettings.swift */,
+				8884536B27720400001E22B9 /* ToolOperationContext.swift */,
+				8884536C27720400001E22B9 /* UserSettings.swift */,
+				8884536D27720400001E22B9 /* Drawing.swift */,
+			);
+			path = "Data model";
+			sourceTree = "<group>";
+		};
+		8884536E27720400001E22B9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8884536F27720400001E22B9 /* DrawsanaUtilities.swift */,
+				8884537027720400001E22B9 /* Extensions */,
+				8884537627720400001E22B9 /* ImmediatePanGestureRecognizer.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8884537027720400001E22B9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8884537127720400001E22B9 /* CGPoint+DrawsanaExtensions.swift */,
+				8884537227720400001E22B9 /* CGFloat+DrawsanaExtensions.swift */,
+				8884537327720400001E22B9 /* CGRect+DrawsanaExtensions.swift */,
+				8884537427720400001E22B9 /* UIColor+DrawsanaExtensions.swift */,
+				8884537527720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		889614E92769C88D00D59E02 /* SharedComponents */ = {
+			isa = PBXGroup;
+			children = (
+				88845346277203FF001E22B9 /* Drawsana */,
+				8884537727720400001E22B9 /* Layout.swift */,
+				88F628F0276B72EE0056A87D /* AudioRecorder */,
+				88F628DE276B2B4B0056A87D /* Classes */,
+				889614EA2769C88D00D59E02 /* VideoUltilities.swift */,
+			);
+			path = SharedComponents;
 			sourceTree = "<group>";
 		};
 		88BF91832761CD1000488A15 = {
@@ -156,7 +290,7 @@
 		88BF918E2761CD1000488A15 /* Swingtweaks */ = {
 			isa = PBXGroup;
 			children = (
-				869E9F42276A1B6900C820D6 /* Utils */,
+				889614E92769C88D00D59E02 /* SharedComponents */,
 				88BF91A62761CE7B00488A15 /* AppDelegate */,
 				88BF91A82761CF5500488A15 /* Resources */,
 				88BF91A42761CE5A00488A15 /* Scene */,
@@ -168,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				88BF91932761CD1000488A15 /* ViewController.swift */,
+				88F5A77127708CD6008E77ED /* AudioViewController.swift */,
 				88BF91AA2761D19200488A15 /* CreateTweakView */,
 			);
 			path = Scene;
@@ -189,7 +324,10 @@
 				88BF91982761CD3A00488A15 /* Assets.xcassets */,
 				88BF919A2761CD3A00488A15 /* LaunchScreen.storyboard */,
 				88BF919D2761CD3A00488A15 /* Info.plist */,
-				B7775FBE2768CF7200A1078E /* videoApp.mov */,
+				887DFE292771BCCA001BF968 /* videoApp.mp4 */,
+				8884534227720163001E22B9 /* videoApp.mov */,
+				88F5A7742770B836008E77ED /* TempFile.m4a */,
+				889614EF276A06F200D59E02 /* demoAudio.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -202,122 +340,41 @@
 			path = CreateTweakView;
 			sourceTree = "<group>";
 		};
-		B70141DF276B33B7006E3951 /* Drawsana */ = {
+		88F628DE276B2B4B0056A87D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B7014234276B4CBC006E3951 /* ColorPickerViewController.swift */,
-				B7014237276B4CC5006E3951 /* ToolPickerViewController.swift */,
-				B70141E0276B33B7006E3951 /* Tools */,
-				B70141EF276B33B8006E3951 /* Shapes */,
-				B70141FB276B33B8006E3951 /* _Support */,
-				B70141FE276B33B8006E3951 /* DrawsanaView.swift */,
-				B70141FF276B33B8006E3951 /* Data model */,
-				B7014205276B33B8006E3951 /* Helpers */,
+				88F628EC276B2D060056A87D /* LoadingView.swift */,
+				88F628DF276B2B4B0056A87D /* .gitkeep */,
+				88F628E0276B2B4B0056A87D /* VideoGenerator.swift */,
+				88F628E1276B2B4B0056A87D /* Extensions */,
+				88F628E4276B2B4B0056A87D /* Error */,
 			);
-			path = Drawsana;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		B70141E0276B33B7006E3951 /* Tools */ = {
+		88F628E1276B2B4B0056A87D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B70141E1276B33B7006E3951 /* DrawingTool.swift */,
-				B70141E2276B33B7006E3951 /* DrawingOperations.swift */,
-				B70141E3276B33B7006E3951 /* Implementations */,
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		B70141E3276B33B7006E3951 /* Implementations */ = {
-			isa = PBXGroup;
-			children = (
-				B70141E4276B33B7006E3951 /* SelectionTool.swift */,
-				B70141E5276B33B7006E3951 /* StarTool_PentagonTool_TriangleTool.swift */,
-				B70141E6276B33B8006E3951 /* AngleTool.swift */,
-				B70141E7276B33B8006E3951 /* Text tool */,
-				B70141EB276B33B8006E3951 /* PenTool_EraserTool.swift */,
-				B70141EC276B33B8006E3951 /* DrawingToolForShapeWithTwoPoints.swift */,
-				B70141ED276B33B8006E3951 /* DrawingToolForShapeWithThreePoints.swift */,
-				B70141EE276B33B8006E3951 /* ArrowTool_EllipseTool_LineTool_RectTool.swift */,
-			);
-			path = Implementations;
-			sourceTree = "<group>";
-		};
-		B70141E7276B33B8006E3951 /* Text tool */ = {
-			isa = PBXGroup;
-			children = (
-				B70141E8276B33B8006E3951 /* DragHandler.swift */,
-				B70141E9276B33B8006E3951 /* TextShapeEditingView.swift */,
-				B70141EA276B33B8006E3951 /* TextTool.swift */,
-			);
-			path = "Text tool";
-			sourceTree = "<group>";
-		};
-		B70141EF276B33B8006E3951 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				B70141F0276B33B8006E3951 /* Shape.swift */,
-				B70141F1276B33B8006E3951 /* ShapeTransform.swift */,
-				B70141F2276B33B8006E3951 /* Implementations */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
-		B70141F2276B33B8006E3951 /* Implementations */ = {
-			isa = PBXGroup;
-			children = (
-				B70141F3276B33B8006E3951 /* LineShape.swift */,
-				B70141F4276B33B8006E3951 /* PenShape.swift */,
-				B70141F5276B33B8006E3951 /* NgonShape.swift */,
-				B70141F6276B33B8006E3951 /* RectShape.swift */,
-				B70141F7276B33B8006E3951 /* TextShape.swift */,
-				B70141F8276B33B8006E3951 /* StarShape.swift */,
-				B70141F9276B33B8006E3951 /* EllipseShape.swift */,
-				B70141FA276B33B8006E3951 /* AngleShape.swift */,
-			);
-			path = Implementations;
-			sourceTree = "<group>";
-		};
-		B70141FB276B33B8006E3951 /* _Support */ = {
-			isa = PBXGroup;
-			children = (
-				B70141FC276B33B8006E3951 /* Drawsana.h */,
-				B70141FD276B33B8006E3951 /* Info.plist */,
-			);
-			path = _Support;
-			sourceTree = "<group>";
-		};
-		B70141FF276B33B8006E3951 /* Data model */ = {
-			isa = PBXGroup;
-			children = (
-				B7014200276B33B8006E3951 /* DrawingOperationStack.swift */,
-				B7014201276B33B8006E3951 /* ToolSettings.swift */,
-				B7014202276B33B8006E3951 /* ToolOperationContext.swift */,
-				B7014203276B33B8006E3951 /* UserSettings.swift */,
-				B7014204276B33B8006E3951 /* Drawing.swift */,
-			);
-			path = "Data model";
-			sourceTree = "<group>";
-		};
-		B7014205276B33B8006E3951 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				B7014206276B33B8006E3951 /* DrawsanaUtilities.swift */,
-				B7014207276B33B8006E3951 /* Extensions */,
-				B701420D276B33B8006E3951 /* ImmediatePanGestureRecognizer.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		B7014207276B33B8006E3951 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B7014208276B33B8006E3951 /* CGPoint+DrawsanaExtensions.swift */,
-				B7014209276B33B8006E3951 /* CGFloat+DrawsanaExtensions.swift */,
-				B701420A276B33B8006E3951 /* CGRect+DrawsanaExtensions.swift */,
-				B701420B276B33B8006E3951 /* UIColor+DrawsanaExtensions.swift */,
-				B701420C276B33B8006E3951 /* KeyedDecodingContainer+DrawsanaExtensions.swift */,
+				88F628E2276B2B4B0056A87D /* AVAssetExtension.swift */,
+				88F628E3276B2B4B0056A87D /* ImageExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88F628E4276B2B4B0056A87D /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				88F628E5276B2B4B0056A87D /* VideoGeneratorError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		88F628F0276B72EE0056A87D /* AudioRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				88F628F1276B73090056A87D /* AGAudioRecorder.swift */,
+			);
+			path = AudioRecorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,10 +434,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7775FBF2768CF7200A1078E /* videoApp.mov in Resources */,
 				88BF919C2761CD3A00488A15 /* LaunchScreen.storyboard in Resources */,
 				88BF91992761CD3A00488A15 /* Assets.xcassets in Resources */,
+				88F628E6276B2B4B0056A87D /* .gitkeep in Resources */,
+				889614F0276A06F200D59E02 /* demoAudio.mp3 in Resources */,
 				88BF91972761CD1000488A15 /* Main.storyboard in Resources */,
+				8884534327720163001E22B9 /* videoApp.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,51 +450,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7014230276B33B8006E3951 /* KeyedDecodingContainer+DrawsanaExtensions.swift in Sources */,
-				B791DC432771A52C0067DAAB /* VideoEditor.swift in Sources */,
-				B7014231276B33B8006E3951 /* ImmediatePanGestureRecognizer.swift in Sources */,
-				B701422B276B33B8006E3951 /* DrawsanaUtilities.swift in Sources */,
-				B701422D276B33B8006E3951 /* CGFloat+DrawsanaExtensions.swift in Sources */,
-				B7014222276B33B8006E3951 /* EllipseShape.swift in Sources */,
-				B701422C276B33B8006E3951 /* CGPoint+DrawsanaExtensions.swift in Sources */,
-				B701420E276B33B8006E3951 /* DrawingTool.swift in Sources */,
+				8884538B27720400001E22B9 /* TextShape.swift in Sources */,
+				8884539427720400001E22B9 /* ToolOperationContext.swift in Sources */,
+				8884537F27720400001E22B9 /* TextTool.swift in Sources */,
+				8884539127720400001E22B9 /* DrawsanaView.swift in Sources */,
+				8884539027720400001E22B9 /* ColorPickerViewController.swift in Sources */,
+				8884539B27720400001E22B9 /* UIColor+DrawsanaExtensions.swift in Sources */,
+				8884538427720400001E22B9 /* ToolPickerViewController.swift in Sources */,
+				8884537A27720400001E22B9 /* SelectionTool.swift in Sources */,
+				8884539C27720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift in Sources */,
 				88BF91942761CD1000488A15 /* ViewController.swift in Sources */,
-				B701422E276B33B8006E3951 /* CGRect+DrawsanaExtensions.swift in Sources */,
-				B7014218276B33B8006E3951 /* DrawingToolForShapeWithThreePoints.swift in Sources */,
-				B701420F276B33B8006E3951 /* DrawingOperations.swift in Sources */,
-				B7014226276B33B8006E3951 /* DrawingOperationStack.swift in Sources */,
-				B701421E276B33B8006E3951 /* NgonShape.swift in Sources */,
-				B7014219276B33B8006E3951 /* ArrowTool_EllipseTool_LineTool_RectTool.swift in Sources */,
-				B7014227276B33B8006E3951 /* ToolSettings.swift in Sources */,
-				B7014228276B33B8006E3951 /* ToolOperationContext.swift in Sources */,
-				B7014229276B33B8006E3951 /* UserSettings.swift in Sources */,
+				8884539627720400001E22B9 /* Drawing.swift in Sources */,
+				889614EB2769C88E00D59E02 /* VideoUltilities.swift in Sources */,
+				8884538E27720400001E22B9 /* AngleShape.swift in Sources */,
+				8884538327720400001E22B9 /* ArrowTool_EllipseTool_LineTool_RectTool.swift in Sources */,
+				8884539327720400001E22B9 /* ToolSettings.swift in Sources */,
+				8884537827720400001E22B9 /* DrawingTool.swift in Sources */,
+				8884539527720400001E22B9 /* UserSettings.swift in Sources */,
 				88BF91AD2761D20600488A15 /* CreateTweakViewController.swift in Sources */,
-				B7014213276B33B8006E3951 /* DragHandler.swift in Sources */,
-				869E9F46276A231800C820D6 /* ImageToVideo.swift in Sources */,
-				B7014217276B33B8006E3951 /* DrawingToolForShapeWithTwoPoints.swift in Sources */,
+				8884538A27720400001E22B9 /* RectShape.swift in Sources */,
+				8884537927720400001E22B9 /* DrawingOperations.swift in Sources */,
+				8884539827720400001E22B9 /* CGPoint+DrawsanaExtensions.swift in Sources */,
+				8884538227720400001E22B9 /* DrawingToolForShapeWithThreePoints.swift in Sources */,
+				8884539727720400001E22B9 /* DrawsanaUtilities.swift in Sources */,
+				88F628ED276B2D060056A87D /* LoadingView.swift in Sources */,
+				8884537B27720400001E22B9 /* StarTool_PentagonTool_TriangleTool.swift in Sources */,
+				88F628E7276B2B4B0056A87D /* VideoGenerator.swift in Sources */,
+				8884539D27720400001E22B9 /* ImmediatePanGestureRecognizer.swift in Sources */,
+				8884539E27720400001E22B9 /* Layout.swift in Sources */,
+				88F5A77227708CD6008E77ED /* AudioViewController.swift in Sources */,
+				8884538D27720400001E22B9 /* EllipseShape.swift in Sources */,
+				8884537E27720400001E22B9 /* TextShapeEditingView.swift in Sources */,
+				8884538827720400001E22B9 /* PenShape.swift in Sources */,
+				8884539A27720400001E22B9 /* CGRect+DrawsanaExtensions.swift in Sources */,
 				88BF91902761CD1000488A15 /* AppDelegate.swift in Sources */,
-				B7014216276B33B8006E3951 /* PenTool_EraserTool.swift in Sources */,
-				B7014220276B33B8006E3951 /* TextShape.swift in Sources */,
-				B701422A276B33B8006E3951 /* Drawing.swift in Sources */,
-				B7014221276B33B8006E3951 /* StarShape.swift in Sources */,
-				B7014214276B33B8006E3951 /* TextShapeEditingView.swift in Sources */,
-				B701422F276B33B8006E3951 /* UIColor+DrawsanaExtensions.swift in Sources */,
-				B7014210276B33B8006E3951 /* SelectionTool.swift in Sources */,
-				B7DC0AF6276C985B007AE6CA /* Layout.swift in Sources */,
-				B701421C276B33B8006E3951 /* LineShape.swift in Sources */,
-				B7014211276B33B8006E3951 /* StarTool_PentagonTool_TriangleTool.swift in Sources */,
+				88F628F2276B73090056A87D /* AGAudioRecorder.swift in Sources */,
+				88F628E8276B2B4B0056A87D /* AVAssetExtension.swift in Sources */,
+				88F628EA276B2B4B0056A87D /* VideoGeneratorError.swift in Sources */,
+				8884538627720400001E22B9 /* ShapeTransform.swift in Sources */,
+				8884539227720400001E22B9 /* DrawingOperationStack.swift in Sources */,
+				8884538927720400001E22B9 /* NgonShape.swift in Sources */,
+				8884538527720400001E22B9 /* Shape.swift in Sources */,
 				88BF91922761CD1000488A15 /* SceneDelegate.swift in Sources */,
-				B701421F276B33B8006E3951 /* RectShape.swift in Sources */,
-				B7014212276B33B8006E3951 /* AngleTool.swift in Sources */,
-				B701421B276B33B8006E3951 /* ShapeTransform.swift in Sources */,
-				B7014238276B4CC5006E3951 /* ToolPickerViewController.swift in Sources */,
-				B7014215276B33B8006E3951 /* TextTool.swift in Sources */,
-				B701421A276B33B8006E3951 /* Shape.swift in Sources */,
-				869E9F44276A1B8500C820D6 /* MAKImageToVideo.swift in Sources */,
-				B7014235276B4CBC006E3951 /* ColorPickerViewController.swift in Sources */,
-				B701421D276B33B8006E3951 /* PenShape.swift in Sources */,
-				B7014223276B33B8006E3951 /* AngleShape.swift in Sources */,
-				B7014225276B33B8006E3951 /* DrawsanaView.swift in Sources */,
+				8884538C27720400001E22B9 /* StarShape.swift in Sources */,
+				8884537C27720400001E22B9 /* AngleTool.swift in Sources */,
+				8884539927720400001E22B9 /* CGFloat+DrawsanaExtensions.swift in Sources */,
+				8884537D27720400001E22B9 /* DragHandler.swift in Sources */,
+				8884538027720400001E22B9 /* PenTool_EraserTool.swift in Sources */,
+				8884538127720400001E22B9 /* DrawingToolForShapeWithTwoPoints.swift in Sources */,
+				88F628E9276B2B4B0056A87D /* ImageExtension.swift in Sources */,
+				8884538727720400001E22B9 /* LineShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,16 +648,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 58L4SBD69K;
+				DEVELOPMENT_TEAM = 7K87V8X3V7;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.unhabitat.tribecommunity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adilbek.iscra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = TribeCommunity_Development_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = Iscra_Development_Profile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -606,16 +670,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 58L4SBD69K;
+				DEVELOPMENT_TEAM = 7K87V8X3V7;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.unhabitat.tribecommunity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adilbek.iscra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = TribeCommunity_Development_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = Iscra_Development_Profile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
