@@ -26,7 +26,7 @@ class VideoUltilities: NSObject {
     let sourceAsset = AVURLAsset(url: videoURL as URL)
     
     let compositionVideoTrack = composition.addMutableTrack(withMediaType: AVMediaType.video, preferredTrackID: kCMPersistentTrackID_Invalid)
-
+    print("jitendra")
     let sourceVideoTrack: AVAssetTrack = sourceAsset.tracks(withMediaType: AVMediaType.video)[0]
       
     let x = CMTimeRangeMake(start: CMTime.zero, duration: sourceAsset.duration)
