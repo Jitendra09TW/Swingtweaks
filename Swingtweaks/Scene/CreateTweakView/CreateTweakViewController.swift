@@ -48,6 +48,7 @@ class CreateTweakViewController: UIViewController {
     @IBOutlet weak var btnSpeedOneFourth:UIButton!
     @IBOutlet weak var btnSpeedOneEight:UIButton!
     @IBOutlet weak var btnAnnotationShapes:UIButton!
+    @IBOutlet weak var btnSave:UIButton!
     
     var playerVedioRate:Float = 1.0
     var player: AVPlayer?
@@ -84,8 +85,8 @@ class CreateTweakViewController: UIViewController {
        RectTool(),
        EraserTool(),
       ] }()
-     // private let editor = VideoEditor()
-     // end
+    private let editor = VideoEditor()
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +97,7 @@ class CreateTweakViewController: UIViewController {
 extension CreateTweakViewController{
     private func SetUp() {
          self.playLocalVideo()
-        [btnBack, btnPlay, btnSpeed, btnRecord, btnLine, btnCircle, btnSquare, btnAnnotationShapes, btnZoom, btnColor, btnEraser, btnSpeedHalf, btnSpeedNormal, btnSpeedOneFourth, btnSpeedOneEight ].forEach {
+        [btnBack, btnPlay, btnSpeed, btnRecord, btnLine, btnCircle, btnSquare, btnAnnotationShapes, btnZoom, btnColor, btnEraser, btnSpeedHalf, btnSpeedNormal, btnSpeedOneFourth, btnSpeedOneEight, btnSave].forEach {
             $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
         }
         player?.addObserver(self, forKeyPath: "rate", options: [], context: nil)
@@ -157,7 +158,7 @@ extension CreateTweakViewController{
 
     }
     func playLocalVideo() {
-        guard let path = Bundle.main.path(forResource: "videoApp", ofType: "mov") else {
+        guard let path = Bundle.main.path(forResource: "webVideo", ofType: "mov") else {
             return
         }
         let videoURL = NSURL(fileURLWithPath: path)
@@ -209,9 +210,44 @@ extension CreateTweakViewController {
             speedSelectionAction(speedretio:4, speed: 1/4)
         case btnSpeedOneEight:
             speedSelectionAction(speedretio:8, speed: 1/8)
+        case btnSave:
+            self.saveVideoSetup()
         default:
             break
         }
+    }
+    func saveVideoSetup() {
+        if let imgRender = drawingView.render() {
+            self.imgFrames.isHidden = true
+            print("imgrender",imgRender)
+            
+            guard let path = Bundle.main.path(forResource: "webVideo", ofType: "mov") else {
+                return
+            }
+            
+            let videoURL = NSURL(fileURLWithPath: path)
+            
+            self.editor.editVideo(fromVideoAt: videoURL as URL, drawImage: imgRender) {
+                exportedURL in
+                print("exportedURL", exportedURL)
+                guard let newVideoURL = exportedURL else {
+                    return
+                }
+                self.saveVideoToLibrary(exportedURL: newVideoURL)
+            }
+        }
+    }
+    private func saveVideoToLibrary(exportedURL: URL) {
+      PHPhotoLibrary.shared().performChanges( {
+        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: exportedURL)
+      }) { [weak self] (isSaved, error) in
+        if isSaved {
+          print("Video saved.")
+        } else {
+          print("Cannot save video.")
+          print(error ?? "unknown error")
+        }
+      }
     }
     private func playAction() {
         if isPlaying {
@@ -223,7 +259,6 @@ extension CreateTweakViewController {
             player?.rate = playerVedioRate
             self.btnPlay.isSelected = true
         }
-        self.toolsSetup(toolIndex: 0)
     }
     
     private func speedAction() {
@@ -336,7 +371,7 @@ extension CreateTweakViewController {
 }
 extension CreateTweakViewController {
     func toolsSetup(toolIndex: Int) {
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .center
         imageView.clipsToBounds = true
         // view.addSubview(imageView) { $0.center().height(220).width(500) }
         view.addSubview(drawingView)

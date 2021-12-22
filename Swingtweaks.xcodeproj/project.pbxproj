@@ -63,6 +63,8 @@
 		88F628EA276B2B4B0056A87D /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E5276B2B4B0056A87D /* VideoGeneratorError.swift */; };
 		88F628ED276B2D060056A87D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628EC276B2D060056A87D /* LoadingView.swift */; };
 		88F628F2276B73090056A87D /* AGAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628F1276B73090056A87D /* AGAudioRecorder.swift */; };
+		B7A9BE4F27732E1300A73E7F /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */; };
+		B7A9BE53277347C900A73E7F /* webVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = B7A9BE52277347C900A73E7F /* webVideo.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +130,8 @@
 		88F628E5276B2B4B0056A87D /* VideoGeneratorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGeneratorError.swift; sourceTree = "<group>"; };
 		88F628EC276B2D060056A87D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		88F628F1276B73090056A87D /* AGAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAudioRecorder.swift; sourceTree = "<group>"; };
+		B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
+		B7A9BE52277347C900A73E7F /* webVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = webVideo.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +268,7 @@
 			children = (
 				88845346277203FF001E22B9 /* Drawsana */,
 				8884537727720400001E22B9 /* Layout.swift */,
+				B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */,
 				88F628F0276B72EE0056A87D /* AudioRecorder */,
 				88F628DE276B2B4B0056A87D /* Classes */,
 				889614EA2769C88D00D59E02 /* VideoUltilities.swift */,
@@ -326,6 +331,7 @@
 				88BF919D2761CD3A00488A15 /* Info.plist */,
 				887DFE292771BCCA001BF968 /* videoApp.mp4 */,
 				8884534227720163001E22B9 /* videoApp.mov */,
+				B7A9BE52277347C900A73E7F /* webVideo.mov */,
 				88F5A7742770B836008E77ED /* TempFile.m4a */,
 				889614EF276A06F200D59E02 /* demoAudio.mp3 */,
 			);
@@ -439,6 +445,7 @@
 				88F628E6276B2B4B0056A87D /* .gitkeep in Resources */,
 				889614F0276A06F200D59E02 /* demoAudio.mp3 in Resources */,
 				88BF91972761CD1000488A15 /* Main.storyboard in Resources */,
+				B7A9BE53277347C900A73E7F /* webVideo.mov in Resources */,
 				8884534327720163001E22B9 /* videoApp.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +479,7 @@
 				8884537927720400001E22B9 /* DrawingOperations.swift in Sources */,
 				8884539827720400001E22B9 /* CGPoint+DrawsanaExtensions.swift in Sources */,
 				8884538227720400001E22B9 /* DrawingToolForShapeWithThreePoints.swift in Sources */,
+				B7A9BE4F27732E1300A73E7F /* VideoEditor.swift in Sources */,
 				8884539727720400001E22B9 /* DrawsanaUtilities.swift in Sources */,
 				88F628ED276B2D060056A87D /* LoadingView.swift in Sources */,
 				8884537B27720400001E22B9 /* StarTool_PentagonTool_TriangleTool.swift in Sources */,
@@ -648,16 +656,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7K87V8X3V7;
+				DEVELOPMENT_TEAM = 58L4SBD69K;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adilbek.iscra;
+				PRODUCT_BUNDLE_IDENTIFIER = org.unhabitat.tribecommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Iscra_Development_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = TribeCommunity_Development_Profile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -670,16 +678,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 7K87V8X3V7;
+				DEVELOPMENT_TEAM = 58L4SBD69K;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adilbek.iscra;
+				PRODUCT_BUNDLE_IDENTIFIER = org.unhabitat.tribecommunity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Iscra_Development_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = TribeCommunity_Development_Profile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

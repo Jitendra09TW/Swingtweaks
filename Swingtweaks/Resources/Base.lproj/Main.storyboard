@@ -410,6 +410,7 @@
                         <outlet property="btnLine" destination="YwQ-A6-c0W" id="LO6-u9-Ab8"/>
                         <outlet property="btnPlay" destination="ktr-4Q-6rz" id="pjw-da-eax"/>
                         <outlet property="btnRecord" destination="aql-sK-C9y" id="wYN-cf-dk1"/>
+                        <outlet property="btnSave" destination="5vl-et-pTY" id="Iqf-l5-Q4F"/>
                         <outlet property="btnSpeed" destination="zP0-Wm-d81" id="QnR-ca-N5R"/>
                         <outlet property="btnSpeedHalf" destination="IeT-Vt-3Qt" id="Vgm-TI-0ZL"/>
                         <outlet property="btnSpeedNormal" destination="I6r-OM-VSS" id="JLk-qU-dXl"/>
