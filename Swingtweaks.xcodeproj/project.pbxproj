@@ -68,7 +68,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		887DFE292771BCCA001BF968 /* videoApp.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoApp.mp4; sourceTree = "<group>"; };
 		8884534227720163001E22B9 /* videoApp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = videoApp.mov; sourceTree = "<group>"; };
 		88845348277203FF001E22B9 /* DrawingTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingTool.swift; sourceTree = "<group>"; };
 		88845349277203FF001E22B9 /* DrawingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingOperations.swift; sourceTree = "<group>"; };
@@ -329,7 +328,6 @@
 				88BF91982761CD3A00488A15 /* Assets.xcassets */,
 				88BF919A2761CD3A00488A15 /* LaunchScreen.storyboard */,
 				88BF919D2761CD3A00488A15 /* Info.plist */,
-				887DFE292771BCCA001BF968 /* videoApp.mp4 */,
 				8884534227720163001E22B9 /* videoApp.mov */,
 				B7A9BE52277347C900A73E7F /* webVideo.mov */,
 				88F5A7742770B836008E77ED /* TempFile.m4a */,

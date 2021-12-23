@@ -29,10 +29,13 @@
 import UIKit
 import AVFoundation
 
-class VideoEditor {
-  func editVideo(fromVideoAt videoURL: URL, drawImage: UIImage, onComplete: @escaping (URL?) -> Void) {
+class VideoEditorLibrary {
+    func editVideo(fromVideoAt videoURL: URL, drawImage: UIImage,drawingReact: CGRect,
+                   videoReact: CGRect, onComplete: @escaping (URL?) -> Void) {
     print("videoURL",videoURL)
     print("DrawImg",drawImage)
+    print("drawingReact",drawingReact)
+    print("videoReact",videoReact)
     let asset = AVURLAsset(url: videoURL)
     let composition = AVMutableComposition()
     
@@ -44,7 +47,6 @@ class VideoEditor {
         onComplete(nil)
         return
     }
-    
     do {
       let timeRange = CMTimeRange(start: .zero, duration: asset.duration)
       try compositionTrack.insertTimeRange(timeRange, of: assetTrack, at: .zero)
@@ -66,8 +68,8 @@ class VideoEditor {
     let videoSize: CGSize
     if videoInfo.isPortrait {
       videoSize = CGSize(
-        width: assetTrack.naturalSize.height,
-        height: assetTrack.naturalSize.width)
+        width: assetTrack.naturalSize.width,
+        height: assetTrack.naturalSize.height)
     } else {
       videoSize = assetTrack.naturalSize
     }
@@ -81,7 +83,7 @@ class VideoEditor {
     videoLayer.frame = CGRect(x: 0,y: 0,
                               width: videoSize.width,height: videoSize.height)
    // videoLayer.backgroundColor = UIColor.blue.cgColor
-    addImage(to: overlayLayer, videoSize: videoSize, drawImage: drawImage)
+    addImage(to: overlayLayer, videoFrames: videoReact, drawImage: drawImage)
     
     let outputLayer = CALayer()
     outputLayer.frame = CGRect(origin: .zero, size: videoSize)
@@ -91,18 +93,15 @@ class VideoEditor {
     let videoComposition = AVMutableVideoComposition()
     videoComposition.renderSize = videoSize
     videoComposition.frameDuration = CMTime(value: 1, timescale: 30)
-    videoComposition.animationTool = AVVideoCompositionCoreAnimationTool(
-      postProcessingAsVideoLayer: videoLayer,
-      in: outputLayer)
+    videoComposition.animationTool =
+        AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer,
+                                            in: outputLayer)
     
     let instruction = AVMutableVideoCompositionInstruction()
-    instruction.timeRange = CMTimeRange(
-      start: .zero,
-      duration: composition.duration)
+    instruction.timeRange = CMTimeRange(start: .zero, duration: composition.duration)
     videoComposition.instructions = [instruction]
-    let layerInstruction = compositionLayerInstruction(
-      for: compositionTrack,
-      assetTrack: assetTrack)
+    let layerInstruction = compositionLayerInstruction(for: compositionTrack,
+                                                       assetTrack: assetTrack)
     instruction.layerInstructions = [layerInstruction]
     
     guard let export = AVAssetExportSession(
@@ -113,7 +112,7 @@ class VideoEditor {
         onComplete(nil)
         return
     }
-    
+
     let videoName = UUID().uuidString
     let exportURL = URL(fileURLWithPath: NSTemporaryDirectory())
       .appendingPathComponent(videoName)
@@ -138,58 +137,19 @@ class VideoEditor {
     }
   }
   
-    private func addImage(to layer: CALayer, videoSize: CGSize, drawImage: UIImage) {
-    let image = drawImage//UIImage(named: "overlay")!
-    let imageLayer = CALayer()
-    
-    let aspect: CGFloat = image.size.width / image.size.height
-    let width = videoSize.width
-    let height = videoSize.height  //width / aspect
-    imageLayer.frame = CGRect(x: 0,y: 0,width: width,height: height)
-    print("imgeFramesss", imageLayer.frame)
-    //imageLayer.backgroundColor = UIColor.purple.cgColor
-    imageLayer.contents = image.cgImage
-    layer.addSublayer(imageLayer)
-  }
-  
-  private func add(text: String, to layer: CALayer, videoSize: CGSize) {
-    let attributedText = NSAttributedString(
-      string: text,
-      attributes: [
-        .font: UIFont(name: "ArialRoundedMTBold", size: 60) as Any,
-        .foregroundColor: UIColor(named: "rw-green")!,
-        .strokeColor: UIColor.white,
-        .strokeWidth: -3])
-    
-    let textLayer = CATextLayer()
-    textLayer.string = attributedText
-    textLayer.shouldRasterize = true
-    textLayer.rasterizationScale = UIScreen.main.scale
-    textLayer.backgroundColor = UIColor.clear.cgColor
-    textLayer.alignmentMode = .center
-    
-    textLayer.frame = CGRect(
-      x: 0,
-      y: videoSize.height * 0.66,
-      width: videoSize.width,
-      height: 150)
-    textLayer.displayIfNeeded()
-    
-    let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-    scaleAnimation.fromValue = 0.8
-    scaleAnimation.toValue = 1.2
-    scaleAnimation.duration = 0.5
-    scaleAnimation.repeatCount = .greatestFiniteMagnitude
-    scaleAnimation.autoreverses = true
-    scaleAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-    
-    scaleAnimation.beginTime = AVCoreAnimationBeginTimeAtZero
-    scaleAnimation.isRemovedOnCompletion = false
-    textLayer.add(scaleAnimation, forKey: "scale")
-    
-    layer.addSublayer(textLayer)
-  }
-  
+    private func addImage(to layer: CALayer, videoFrames: CGRect, drawImage: UIImage) {
+        let image = drawImage
+        let imageLayer = CALayer()
+        let width = videoFrames.width
+        let height = videoFrames.height
+        imageLayer.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        print("imgeFramesss", imageLayer.frame)
+        imageLayer.contentsGravity = .resizeAspect
+        imageLayer.isGeometryFlipped = false
+        imageLayer.contents = image.cgImage
+        layer.addSublayer(imageLayer)
+    }
+
   private func orientation(from transform: CGAffineTransform) -> (orientation: UIImage.Orientation, isPortrait: Bool) {
     var assetOrientation = UIImage.Orientation.up
     var isPortrait = false

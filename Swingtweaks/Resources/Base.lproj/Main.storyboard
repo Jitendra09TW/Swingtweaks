@@ -92,8 +92,8 @@
                                         </constraints>
                                         <state key="normal" image="Back"/>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQF-Wp-JqB">
-                                        <rect key="frame" x="194" y="15" width="210" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nQF-Wp-JqB">
+                                        <rect key="frame" x="164" y="15" width="240" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwQ-A6-c0W">
                                                 <rect key="frame" x="0.0" y="2.5" width="30" height="25.5"/>
@@ -105,8 +105,15 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" backgroundImage="pencil" catalog="system"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU3-CS-PKm">
+                                                <rect key="frame" x="30" y="2" width="30" height="25.5"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" backgroundImage="line.diagonal.arrow" catalog="system">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgc-IC-dI3">
-                                                <rect key="frame" x="30" y="0.5" width="30" height="29"/>
+                                                <rect key="frame" x="60" y="0.5" width="30" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Qgc-IC-dI3" secondAttribute="height" multiplier="1:1" id="8jN-nc-cir"/>
                                                     <constraint firstAttribute="width" constant="30" id="cwq-bj-djZ"/>
@@ -116,7 +123,7 @@
                                                 <state key="normal" backgroundImage="circle" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kf-HG-PAV">
-                                                <rect key="frame" x="60" y="1" width="30" height="27.5"/>
+                                                <rect key="frame" x="90" y="1" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0cH-30-LtC"/>
                                                     <constraint firstAttribute="width" constant="30" id="P2U-JV-UgC"/>
@@ -126,7 +133,7 @@
                                                 <state key="normal" backgroundImage="squareshape" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3J-Kb-1CQ">
-                                                <rect key="frame" x="90" y="-1" width="30" height="30.5"/>
+                                                <rect key="frame" x="120" y="-1" width="30" height="30.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Bhz-Pd-BN7"/>
                                                     <constraint firstAttribute="width" secondItem="i3J-Kb-1CQ" secondAttribute="height" multiplier="1:1" id="Kln-f8-5Tn"/>
@@ -136,7 +143,7 @@
                                                 <state key="normal" backgroundImage="hand.raised" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC5-ej-NbV">
-                                                <rect key="frame" x="120" y="1" width="30" height="28"/>
+                                                <rect key="frame" x="150" y="1" width="30" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oC5-ej-NbV" secondAttribute="height" multiplier="1:1" id="cSj-Kc-UI4"/>
                                                     <constraint firstAttribute="width" constant="30" id="t8A-Bp-BKe"/>
@@ -146,7 +153,7 @@
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2Q-Vq-Afr">
-                                                <rect key="frame" x="150" y="0.5" width="30" height="29"/>
+                                                <rect key="frame" x="180" y="0.5" width="30" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9NR-Gv-bUR"/>
                                                     <constraint firstAttribute="width" constant="30" id="Zkx-he-T35"/>
@@ -156,7 +163,7 @@
                                                 <state key="normal" backgroundImage="drop" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xux-z4-1Cc">
-                                                <rect key="frame" x="180" y="0.0" width="30" height="28.5"/>
+                                                <rect key="frame" x="210" y="0.0" width="30" height="28.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Xux-z4-1Cc" secondAttribute="height" multiplier="1:1" id="7LC-1O-4GM"/>
                                                     <constraint firstAttribute="height" constant="30" id="8PG-y5-Nlh"/>
@@ -167,13 +174,6 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NoQ-Hh-q8W">
-                                        <rect key="frame" x="65" y="12.5" width="81" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="81" id="Qi9-af-VJt"/>
-                                            <constraint firstAttribute="height" constant="35" id="Y9f-Om-zgG"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -182,8 +182,6 @@
                                     <constraint firstItem="uWt-Jl-6Rj" firstAttribute="leading" secondItem="tZj-S0-4cf" secondAttribute="leading" id="ZKn-9S-7IY"/>
                                     <constraint firstAttribute="height" constant="60" id="exK-6b-Uks"/>
                                     <constraint firstItem="uWt-Jl-6Rj" firstAttribute="centerY" secondItem="tZj-S0-4cf" secondAttribute="centerY" id="gxh-1d-dT3"/>
-                                    <constraint firstItem="NoQ-Hh-q8W" firstAttribute="centerY" secondItem="uWt-Jl-6Rj" secondAttribute="centerY" id="rBc-VO-yJJ"/>
-                                    <constraint firstItem="NoQ-Hh-q8W" firstAttribute="leading" secondItem="uWt-Jl-6Rj" secondAttribute="trailing" constant="25" id="rWm-2J-2tx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-Op-UJn">
@@ -406,6 +404,7 @@
                         <outlet property="btnBack" destination="uWt-Jl-6Rj" id="bTf-Yj-1n2"/>
                         <outlet property="btnCircle" destination="Qgc-IC-dI3" id="0l1-P9-x1t"/>
                         <outlet property="btnColor" destination="U2Q-Vq-Afr" id="5YQ-ja-rBB"/>
+                        <outlet property="btnDrawLine" destination="nU3-CS-PKm" id="3sE-Dc-vRw"/>
                         <outlet property="btnEraser" destination="Xux-z4-1Cc" id="tK5-va-8SZ"/>
                         <outlet property="btnLine" destination="YwQ-A6-c0W" id="LO6-u9-Ab8"/>
                         <outlet property="btnPlay" destination="ktr-4Q-6rz" id="pjw-da-eax"/>
@@ -418,7 +417,6 @@
                         <outlet property="btnSpeedOneFourth" destination="0tr-00-oad" id="VAV-Zf-ppQ"/>
                         <outlet property="btnSquare" destination="2Kf-HG-PAV" id="dVx-4b-RR9"/>
                         <outlet property="btnZoom" destination="oC5-ej-NbV" id="XmV-Fj-j1Y"/>
-                        <outlet property="imgFrames" destination="NoQ-Hh-q8W" id="54H-Kr-itI"/>
                         <outlet property="videoView" destination="JhW-Op-UJn" id="gtx-F6-Ops"/>
                     </connections>
                 </viewController>
@@ -468,6 +466,7 @@
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="drop" catalog="system" width="101" height="128"/>
         <image name="hand.raised" catalog="system" width="128" height="128"/>
+        <image name="line.diagonal.arrow" catalog="system" width="128" height="113"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="mic" catalog="system" width="108" height="128"/>
         <image name="pause.circle.fill" catalog="system" width="128" height="121"/>

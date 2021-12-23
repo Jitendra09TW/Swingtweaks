@@ -42,13 +42,13 @@ class CreateTweakViewController: UIViewController {
     @IBOutlet weak var btnRecord:UIButton!
     @IBOutlet weak var btnCircle:UIButton!
     @IBOutlet weak var btnSquare:UIButton!
-    @IBOutlet weak var imgFrames:UIImageView!
     @IBOutlet weak var btnSpeedHalf:UIButton!
     @IBOutlet weak var btnSpeedNormal:UIButton!
     @IBOutlet weak var btnSpeedOneFourth:UIButton!
     @IBOutlet weak var btnSpeedOneEight:UIButton!
     @IBOutlet weak var btnAnnotationShapes:UIButton!
     @IBOutlet weak var btnSave:UIButton!
+    @IBOutlet weak var btnDrawLine:UIButton!
     
     var playerVedioRate:Float = 1.0
     var player: AVPlayer?
@@ -62,7 +62,7 @@ class CreateTweakViewController: UIViewController {
         return player?.rate != 0 && player?.error == nil
     }
     //  Tools Editors
-    var totalVideoDuration = Float()
+     var totalVideoDuration = Float()
       var totalFramesPerSeconds = Float()
       var getCurrentFramePause = Float()
       var totalFPS = Float()
@@ -84,8 +84,9 @@ class CreateTweakViewController: UIViewController {
        EllipseTool(),
        RectTool(),
        EraserTool(),
+       LineTool()
       ] }()
-    private let editor = VideoEditor()
+    private let editor = VideoEditorLibrary()
  
     
     override func viewDidLoad() {
@@ -97,7 +98,7 @@ class CreateTweakViewController: UIViewController {
 extension CreateTweakViewController{
     private func SetUp() {
          self.playLocalVideo()
-        [btnBack, btnPlay, btnSpeed, btnRecord, btnLine, btnCircle, btnSquare, btnAnnotationShapes, btnZoom, btnColor, btnEraser, btnSpeedHalf, btnSpeedNormal, btnSpeedOneFourth, btnSpeedOneEight, btnSave].forEach {
+        [btnBack, btnPlay, btnSpeed, btnRecord, btnLine, btnCircle, btnSquare, btnAnnotationShapes, btnZoom, btnColor, btnEraser, btnSpeedHalf, btnSpeedNormal, btnSpeedOneFourth, btnSpeedOneEight, btnSave, btnDrawLine].forEach {
             $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
         }
         player?.addObserver(self, forKeyPath: "rate", options: [], context: nil)
@@ -158,7 +159,7 @@ extension CreateTweakViewController{
 
     }
     func playLocalVideo() {
-        guard let path = Bundle.main.path(forResource: "webVideo", ofType: "mov") else {
+        guard let path = Bundle.main.path(forResource: "videoApp", ofType: "mov") else {
             return
         }
         let videoURL = NSURL(fileURLWithPath: path)
@@ -212,23 +213,20 @@ extension CreateTweakViewController {
             speedSelectionAction(speedretio:8, speed: 1/8)
         case btnSave:
             self.saveVideoSetup()
+        case  btnDrawLine:
+            self.drawLineAction()
         default:
             break
         }
     }
     func saveVideoSetup() {
         if let imgRender = drawingView.render() {
-            self.imgFrames.isHidden = true
             print("imgrender",imgRender)
-            
-            guard let path = Bundle.main.path(forResource: "webVideo", ofType: "mov") else {
+            guard let path = Bundle.main.path(forResource: "videoApp", ofType: "mov") else {
                 return
             }
-            
             let videoURL = NSURL(fileURLWithPath: path)
-            
-            self.editor.editVideo(fromVideoAt: videoURL as URL, drawImage: imgRender) {
-                exportedURL in
+            self.editor.editVideo(fromVideoAt: videoURL as URL, drawImage: imgRender, drawingReact: self.drawingView.frame, videoReact: self.videoView.frame) { (exportedURL) in
                 print("exportedURL", exportedURL)
                 guard let newVideoURL = exportedURL else {
                     return
@@ -287,6 +285,9 @@ extension CreateTweakViewController {
     }
     private func eraserAction() {
         self.toolsSetup(toolIndex: 3)
+    }
+    private func drawLineAction() {
+        self.toolsSetup(toolIndex: 4)
     }
     private func speedSelectionAction(speedretio:Int,speed:Float) {
         playerVedioRate = speed
@@ -354,7 +355,6 @@ extension CreateTweakViewController {
                 print("Total frames", self.totalFramesPerSeconds)
             }
         }
-        
     }
     func getCurrentFrames() {
         let asset = AVAsset(url: URL(string: urlVideo)!)
@@ -363,7 +363,7 @@ extension CreateTweakViewController {
         let time = self.player?.currentTime()
         do {
             let img = try assetImgGenerate.copyCGImage(at: time!, actualTime: nil)
-            self.imgFrames.image = UIImage(cgImage: img)
+           // self.imgFrames.image = UIImage(cgImage: img)
         } catch {
             print("Img error")
         }
@@ -383,7 +383,6 @@ extension CreateTweakViewController {
         drawingView.userSettings.strokeWidth = strokeWidths[strokeWidthIndex]
         drawingView.userSettings.fontName = "Marker Felt"
         drawingView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         drawingView.applyConstraints { $0.width(self.videoView.frame.width).leading(self.videoView.frame.minX).height(self.videoView.frame.height).trailing(self.videoView.frame.minY).top(100).bottom(-100) }
       }
 }
