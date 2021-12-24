@@ -13,19 +13,8 @@ import QuickLook
 import Photos
 
 struct Constants {
- static let colors: [UIColor?] = [
-  .black,
-  .white,
-  .red,
-  .orange,
-  .yellow,
-  .green,
-  .blue,
-  .purple,
-  .brown,
-  .gray,
-  nil
- ]
+ static let colors: [UIColor?] = [.black,.white,.red,.orange,.yellow,
+                                  .green,.blue,.purple,.brown,.gray,nil]
 }
 
 class CreateTweakViewController: UIViewController {
@@ -72,23 +61,23 @@ class CreateTweakViewController: UIViewController {
       //Tools Setup
       lazy var drawingView: DrawsanaView = {
        let drawingView = DrawsanaView()
-       drawingView.delegate = self
-       drawingView.operationStack.delegate = self
        return drawingView
       }()
       let strokeWidths: [CGFloat] = [5,10,20]
       var strokeWidthIndex = 0
-      let imageView = UIImageView(image: UIImage(named: "download1"))
+    
+    lazy var selectionTool = { return SelectionTool(delegate: self) }()
+    
       lazy var tools: [DrawingTool] = { return [
        PenTool(),
        EllipseTool(),
        RectTool(),
        EraserTool(),
-       LineTool()
+       LineTool(),
+      selectionTool
       ] }()
     private let editor = VideoEditorLibrary()
  
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUp()
@@ -243,7 +232,6 @@ extension CreateTweakViewController {
           print("Video saved.")
         } else {
           print("Cannot save video.")
-          print(error ?? "unknown error")
         }
       }
     }
@@ -272,10 +260,10 @@ extension CreateTweakViewController {
         self.toolsSetup(toolIndex: 1)
     }
     private func rectangleAction() {
-        self.toolsSetup(toolIndex: 2)
+        self.toolsSetup(toolIndex: 2) //rectangle tools
     }
     private func AnnotationShapesAction() {
-        print("AnnotationShapesAction")
+      self.toolsSetup(toolIndex: 5) //move tools
     }
     private func zoomAction() {
         print("zoomAction")
@@ -371,9 +359,6 @@ extension CreateTweakViewController {
 }
 extension CreateTweakViewController {
     func toolsSetup(toolIndex: Int) {
-        imageView.contentMode = .center
-        imageView.clipsToBounds = true
-        // view.addSubview(imageView) { $0.center().height(220).width(500) }
         view.addSubview(drawingView)
         Drawing.debugSerialization = true
         drawingView.set(tool: tools[toolIndex])
@@ -384,72 +369,31 @@ extension CreateTweakViewController {
         drawingView.userSettings.fontName = "Marker Felt"
         drawingView.translatesAutoresizingMaskIntoConstraints = false
         drawingView.applyConstraints { $0.width(self.videoView.frame.width).leading(self.videoView.frame.minX).height(self.videoView.frame.height).trailing(self.videoView.frame.minY).top(100).bottom(-100) }
-      }
+    }
 }
-
+extension CreateTweakViewController: SelectionToolDelegate {
+  // When a shape is double-tapped by the selection tool, and it's text,
+  func selectionToolDidTapOnAlreadySelectedShape(_ shape: ShapeSelectable) {
+    if shape as? TextShape != nil {
+     // drawingView.set(tool: textTool, shape: shape)
+    } else {
+      drawingView.toolSettings.selectedShape = nil
+    }
+  }
+}
 // Tools delegates
 extension CreateTweakViewController: ColorPickerViewControllerDelegate {
-  func colorPickerViewControllerDidPick(colorIndex: Int, color: UIColor?, identifier: String) {
-    switch identifier {
-    case "stroke":
-      drawingView.userSettings.strokeColor = color
-    case "fill":
-      drawingView.userSettings.fillColor = color
-    default: break;
+    func colorPickerViewControllerDidPick(colorIndex: Int, color: UIColor?, identifier: String) {
+        switch identifier {
+        case "stroke":
+            drawingView.userSettings.strokeColor = color
+        case "fill":
+            drawingView.userSettings.fillColor = color
+        default: break;
+        }
+        dismiss(animated: true, completion: nil)
     }
-    dismiss(animated: true, completion: nil)
-  }
 }
-
-extension CreateTweakViewController: DrawingOperationStackDelegate {
-  func drawingOperationStackDidUndo(_ operationStack: DrawingOperationStack, operation: DrawingOperation) {
-     print("ddd")
-      //applyUndoViewState()
-  }
-
-  func drawingOperationStackDidRedo(_ operationStack: DrawingOperationStack, operation: DrawingOperation) {
-    print("ddd")
-    //applyUndoViewState()
-  }
-
-  func drawingOperationStackDidApply(_ operationStack: DrawingOperationStack, operation: DrawingOperation) {
-    //applyUndoViewState()
-  }
-}
-extension CreateTweakViewController: DrawsanaViewDelegate {
-  /// When tool changes, update the UI
-  func drawsanaView(_ drawsanaView: DrawsanaView, didSwitchTo tool: DrawingTool) {
-   // toolButton.setTitle(drawingView.tool?.name ?? "", for: .normal)
-  }
-
-  func drawsanaView(_ drawsanaView: DrawsanaView, didChangeStrokeColor strokeColor: UIColor?) {
-   // strokeColorButton.backgroundColor = drawingView.userSettings.strokeColor
-   // strokeColorButton.setTitle(drawingView.userSettings.strokeColor == nil ? "x" : "", for: .normal)
-  }
-
-  func drawsanaView(_ drawsanaView: DrawsanaView, didChangeFillColor fillColor: UIColor?) {
-   // fillColorButton.backgroundColor = drawingView.userSettings.fillColor
-   // fillColorButton.setTitle(drawingView.userSettings.fillColor == nil ? "x" : "", for: .normal)
-  }
-
-  func drawsanaView(_ drawsanaView: DrawsanaView, didChangeStrokeWidth strokeWidth: CGFloat) {
-    strokeWidthIndex = strokeWidths.firstIndex(of: drawingView.userSettings.strokeWidth) ?? 0
-   // strokeWidthButton.setTitle("\(Int(strokeWidths[strokeWidthIndex]))", for: .normal)
-  }
-
-  func drawsanaView(_ drawsanaView: DrawsanaView, didChangeFontName fontName: String) {
-  }
-
-  func drawsanaView(_ drawsanaView: DrawsanaView, didChangeFontSize fontSize: CGFloat) {
-  }
-
-  func drawsanaView(_ drawsanaView: DrawsanaView, didStartDragWith tool: DrawingTool) {
-  }
-
-  func drawsanaView(_ drawsanaView: DrawsanaView, didEndDragWith tool: DrawingTool) {
-  }
-}
-
 private extension NSLayoutConstraint {
   func withPriority(_ priority: UILayoutPriority) -> NSLayoutConstraint {
     self.priority = priority

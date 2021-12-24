@@ -32,10 +32,6 @@ import AVFoundation
 class VideoEditorLibrary {
     func editVideo(fromVideoAt videoURL: URL, drawImage: UIImage,drawingReact: CGRect,
                    videoReact: CGRect, onComplete: @escaping (URL?) -> Void) {
-    print("videoURL",videoURL)
-    print("DrawImg",drawImage)
-    print("drawingReact",drawingReact)
-    print("videoReact",videoReact)
     let asset = AVURLAsset(url: videoURL)
     let composition = AVMutableComposition()
     
