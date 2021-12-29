@@ -39,6 +39,7 @@ class CreateTweakViewController: UIViewController {
     @IBOutlet weak var btnSave:UIButton!
     @IBOutlet weak var btnDrawLine:UIButton!
     
+    
     var playerVedioRate:Float = 1.0
     var player: AVPlayer?
     var playerController: AVPlayerViewController?
@@ -78,6 +79,12 @@ class CreateTweakViewController: UIViewController {
       ] }()
     private let editor = VideoEditorLibrary()
  
+    var didReload:(([UIImage]) -> Void)?
+
+    var imagePicker = UIImagePickerController()
+    
+    var galaryVideoUrl = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUp()
@@ -99,12 +106,10 @@ extension CreateTweakViewController{
                                                selector: #selector(restartVideo),
                                                name: .AVPlayerItemDidPlayToEndTime,
                                                object: self.player?.currentItem)
-        // Manage video player
-        guard let newurl =  updatedUrl else {
-            return
-        }
-        setVideo(url: newurl)
         
+//        if let gallUrl = galaryVideoUrl as? String {
+//            setVideo(url: URL(string: gallUrl)!)
+//        }
     }
     
     @objc func restartVideo() {
@@ -171,7 +176,9 @@ extension CreateTweakViewController {
     @objc func buttonPressed(_ sender: UIButton) {
         switch  sender {
         case btnBack:
+            //self.didReload?(self.frames)
             self.navigationController?.popViewController(animated: true)
+          //  self.createVideoWithImageArray()
         case btnPlay:
             self.playAction()
         case btnSpeed:
@@ -208,6 +215,25 @@ extension CreateTweakViewController {
             break
         }
     }
+    
+
+//    func createVideoWithImageArray() {
+//        DispatchQueue.main.async {
+//            if self.frames.count > 0 {
+//                self.makeMovie(size: self.frames.first!.size, images: self.frames)
+//            }
+//        }
+//    }
+//    func makeMovie(size: CGSize, images: [UIImage]) {
+//        var settings = RenderSettings()
+//        settings.size = size
+//        let imageAnimator = ImageAnimator(renderSettings: settings) {
+//            return images
+//        }
+//        imageAnimator.render() {
+//            print("yes")
+//        }
+//    }
     func saveVideoSetup() {
         if let imgRender = drawingView.render() {
             print("imgrender",imgRender)
@@ -215,12 +241,17 @@ extension CreateTweakViewController {
                 return
             }
             let videoURL = NSURL(fileURLWithPath: path)
+           // if let videoGallaryUrl = URL(string: galaryVideoUrl) {
             self.editor.editVideo(fromVideoAt: videoURL as URL, drawImage: imgRender, drawingReact: self.drawingView.frame, videoReact: self.videoView.frame) { (exportedURL) in
-                print("exportedURL", exportedURL)
-                guard let newVideoURL = exportedURL else {
-                    return
-                }
-                self.saveVideoToLibrary(exportedURL: newVideoURL)
+                    print("exportedURL", exportedURL)
+                    guard let newVideoURL = exportedURL else {
+                        return
+                    }
+                    self.saveVideoToLibrary(exportedURL: newVideoURL)
+//                    self.saveVideoToAlbum(newVideoURL) { (error) in
+//                        print("ERRERERER",error)
+//                    }
+               // }
             }
         }
     }
@@ -229,15 +260,53 @@ extension CreateTweakViewController {
         PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: exportedURL)
       }) { [weak self] (isSaved, error) in
         if isSaved {
-          print("Video saved.")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self?.showAlertView("Saved", message: "Video saved in gallery")
+            }
         } else {
           print("Cannot save video.")
         }
       }
     }
+    
+    func requestAuthorization(completion: @escaping ()->Void) {
+            if PHPhotoLibrary.authorizationStatus() == .notDetermined {
+                PHPhotoLibrary.requestAuthorization { (status) in
+                    DispatchQueue.main.async {
+                        completion()
+                    }
+                }
+            } else if PHPhotoLibrary.authorizationStatus() == .authorized{
+                completion()
+            }
+        }
+    
+    func saveVideoToAlbum(_ outputURL: URL, _ completion: ((Error?) -> Void)?) {
+            requestAuthorization {
+                PHPhotoLibrary.shared().performChanges({
+                    let request = PHAssetCreationRequest.forAsset()
+                    request.addResource(with: .video, fileURL: outputURL, options: nil)
+                }) { (result, error) in
+                    DispatchQueue.main.async {
+                        if let error = error {
+                            print(error.localizedDescription)
+                        } else {
+                            print("Saved successfully")
+                        }
+                        completion?(error)
+                    }
+                }
+            }
+        }
+    
     private func playAction() {
         if isPlaying {
             player?.pause()
+//            guard let localPath = Bundle.main.path(forResource: "videoApp", ofType: "mov") else {
+//                return
+//            }
+//            let videoURL = NSURL(fileURLWithPath: localPath)
+//            self.getAllFramesArray(videoUrl: videoURL as URL)
             self.btnPlay.isSelected = false
         }
         else {
@@ -288,20 +357,15 @@ extension CreateTweakViewController {
         for index in 0..<self.frames.count {
             if index % 3 == 0 {
                 self.frames.remove(at: index)
-                self.frames.insert(#imageLiteral(resourceName: "ImageNew"), at: index)
+                self.frames.insert(#imageLiteral(resourceName: "download1"), at: index)
             }
         }
         print(self.frames)
-        for index in 0..<self.frames.count {
-            if index % 3 == 0 {
-                let newImg = self.frames[index]
-                print(newImg)
-            }
-        }
     }
     
-    func getAllFramesArray() {
-        let asset:AVAsset = AVAsset(url:URL(string: urlVideo)!)
+    func getAllFramesArray(videoUrl: URL) {
+        self.getTotalFramesCount(videoUrl: videoUrl)
+        let asset:AVAsset = AVAsset(url:videoUrl)
         let duration:Float64 = CMTimeGetSeconds(asset.duration)
         self.generator = AVAssetImageGenerator(asset:asset)
         self.generator.appliesPreferredTrackTransform = true
@@ -329,8 +393,8 @@ extension CreateTweakViewController {
         self.getCurrentFramePause = self.totalFPS * Float(paueseDuration)
         print("PauseFrames", self.getCurrentFramePause)
     }
-    func getTotalFramesCount() {
-        let asset = AVURLAsset(url: URL(string: urlVideo)!, options: nil)
+    func getTotalFramesCount(videoUrl: URL) {
+        let asset = AVURLAsset(url: videoUrl, options: nil)
         let tracks = asset.tracks(withMediaType: .video)
         if let framePerSeconds = tracks.first?.nominalFrameRate {
             print("FramePerSeconds", framePerSeconds)
@@ -357,6 +421,7 @@ extension CreateTweakViewController {
         }
     }
 }
+
 extension CreateTweakViewController {
     func toolsSetup(toolIndex: Int) {
         view.addSubview(drawingView)
@@ -399,4 +464,14 @@ private extension NSLayoutConstraint {
     self.priority = priority
     return self
   }
+}
+extension UIViewController {
+    
+    func showAlertView(_ title : String?, message : String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel,
+                                      handler: nil))
+        self.present(alert, animated: true, completion:{
+        })
+    }
 }

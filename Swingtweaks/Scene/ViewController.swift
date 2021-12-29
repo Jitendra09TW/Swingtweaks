@@ -20,11 +20,14 @@ class ViewController: UIViewController {
       var state: AGAudioRecorderState = .Ready
       var recorder: AGAudioRecorder = AGAudioRecorder(withFileName: "TempFile")
 
+    var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         recodeBtn.setTitle("Recode", for: .normal)
         playBtn.setTitle("Play", for: .normal)
         recorder.delegate = self
+        imagePicker.delegate = self
     }
     
     @IBAction func PlayVideo(_ sender: Any) {
@@ -42,9 +45,13 @@ class ViewController: UIViewController {
        @IBAction func play(_ sender: UIButton) {
            recorder.doPlay()
        }
-    /**
-     Create and show an alert view
-     */
+    
+    @IBAction func btnCameraRoll(_ sender: UIButton) {
+        self.selectVideoSetup()
+    }
+    
+   //  Create and show an alert view
+    
     fileprivate func createAlertView(message: String?) {
         let messageAlertController = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
         messageAlertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
@@ -116,4 +123,37 @@ extension ViewController: AGAudioRecorderDelegate {
     }
     
     
+}
+extension ViewController : UIImagePickerControllerDelegate,
+                              UINavigationControllerDelegate {
+    func selectVideoSetup() {
+        let settingsActionSheet: UIAlertController = UIAlertController(title:nil, message:nil, preferredStyle:UIAlertController.Style.actionSheet)
+        settingsActionSheet.addAction(UIAlertAction(title:"Library", style:UIAlertAction.Style.default, handler:{ action in
+            self.photoFromLibrary()
+        }))
+//        settingsActionSheet.addAction(UIAlertAction(title:Language.shared.stringForKey(key: Message.shared.K_Camera), style:UIAlertAction.Style.default, handler:{ action in
+//            self.shootPhoto()
+//        }))
+        settingsActionSheet.addAction(UIAlertAction(title: "Cancel", style:UIAlertAction.Style.cancel, handler:nil))
+        present(settingsActionSheet, animated:true, completion:nil)
+    }
+    func photoFromLibrary() {
+           imagePicker.allowsEditing = true
+           imagePicker.sourceType = .photoLibrary
+           imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .savedPhotosAlbum)!
+           imagePicker.modalPresentationStyle = .popover
+           present(imagePicker, animated: true, completion: nil)
+       }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let videoUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
+            print("videoUrl",videoUrl)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreateTweak" ) as! CreateTweakViewController
+            vc.galaryVideoUrl = "\(videoUrl)"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        dismiss(animated:true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
 }
