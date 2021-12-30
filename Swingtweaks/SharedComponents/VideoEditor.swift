@@ -60,32 +60,41 @@ class VideoEditorLibrary {
     
     compositionTrack.preferredTransform = assetTrack.preferredTransform
     let videoInfo = orientation(from: assetTrack.preferredTransform)
-    
+        print("VideoInfo",videoInfo.orientation.rawValue)
     let videoSize: CGSize
-    if videoInfo.isPortrait {
-      videoSize = CGSize(
-        width: assetTrack.naturalSize.width,
-        height: assetTrack.naturalSize.height)
-    } else {
-      videoSize = assetTrack.naturalSize
-    }
-    
+//    if videoInfo.isPortrait {
+//      videoSize = CGSize(
+//        width: assetTrack.naturalSize.width,
+//        height: assetTrack.naturalSize.height)
+//    } else {
+//      videoSize = assetTrack.naturalSize
+//    }
+    videoSize = assetTrack.naturalSize
     let videoLayer = CALayer()
-    videoLayer.frame = CGRect(origin: .zero, size: videoSize)
     print("videoSizeeeee",videoSize)
     let overlayLayer = CALayer()
-    overlayLayer.frame = CGRect(origin: .zero, size: videoSize)
+   	 overlayLayer.frame = CGRect(origin: .zero, size: videoSize)
+   // overlayLayer.frame = CGRect(x: 0,y: 0,
+                                 // width: videoReact.width,height: videoReact.height)
+   // overlayLayer.backgroundColor = UIColor.red.cgColor
+    overlayLayer.contentsGravity = .resizeAspectFill
+    overlayLayer.isGeometryFlipped = false
+    print("overlayLayerFrame",overlayLayer.frame)
     
-    videoLayer.frame = CGRect(x: 0,y: 0,
-                              width: videoSize.width,height: videoSize.height)
-   // videoLayer.backgroundColor = UIColor.blue.cgColor
-    addImage(to: overlayLayer, videoFrames: videoReact, drawImage: drawImage)
+    videoLayer.frame = CGRect(origin: .zero, size: videoSize)
+    //videoLayer.frame = CGRect(x: 0,y: 0,
+                             // width: videoSize.width,height: videoSize.height)
+    print("VideoLayerFrame",videoLayer.frame)
+    videoLayer.contentsGravity = .resizeAspectFill
+    videoLayer.isGeometryFlipped = false
+    videoLayer.backgroundColor = UIColor.blue.cgColor
+    addImage(to: overlayLayer, videoFrames: videoSize, drawImage: drawImage)
     
     let outputLayer = CALayer()
     outputLayer.frame = CGRect(origin: .zero, size: videoSize)
     outputLayer.addSublayer(videoLayer)
     outputLayer.addSublayer(overlayLayer)
-    //outputLayer.backgroundColor = UIColor.red.cgColor
+    //outputLayer.backgroundColor = UIColor.purple.cgColor
     let videoComposition = AVMutableVideoComposition()
     videoComposition.renderSize = videoSize
     videoComposition.frameDuration = CMTime(value: 1, timescale: 30)
@@ -133,14 +142,14 @@ class VideoEditorLibrary {
     }
   }
   
-    private func addImage(to layer: CALayer, videoFrames: CGRect, drawImage: UIImage) {
+    private func addImage(to layer: CALayer, videoFrames: CGSize, drawImage: UIImage) {
         let image = drawImage
         let imageLayer = CALayer()
         let width = videoFrames.width
         let height = videoFrames.height
         imageLayer.frame = CGRect(x: 0, y: 0, width: width, height: height)
         print("imgeFramesss", imageLayer.frame)
-        imageLayer.contentsGravity = .resizeAspect
+        imageLayer.contentsGravity = .resizeAspectFill
         imageLayer.isGeometryFlipped = false
         imageLayer.contents = image.cgImage
         layer.addSublayer(imageLayer)

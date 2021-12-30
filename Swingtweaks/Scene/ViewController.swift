@@ -125,30 +125,30 @@ extension ViewController: AGAudioRecorderDelegate {
     
 }
 extension ViewController : UIImagePickerControllerDelegate,
-                              UINavigationControllerDelegate {
+                           UINavigationControllerDelegate {
     func selectVideoSetup() {
         let settingsActionSheet: UIAlertController = UIAlertController(title:nil, message:nil, preferredStyle:UIAlertController.Style.actionSheet)
         settingsActionSheet.addAction(UIAlertAction(title:"Library", style:UIAlertAction.Style.default, handler:{ action in
             self.photoFromLibrary()
         }))
-//        settingsActionSheet.addAction(UIAlertAction(title:Language.shared.stringForKey(key: Message.shared.K_Camera), style:UIAlertAction.Style.default, handler:{ action in
-//            self.shootPhoto()
-//        }))
+        //        settingsActionSheet.addAction(UIAlertAction(title:Language.shared.stringForKey(key: Message.shared.K_Camera), style:UIAlertAction.Style.default, handler:{ action in
+        //            self.shootPhoto()
+        //        }))
         settingsActionSheet.addAction(UIAlertAction(title: "Cancel", style:UIAlertAction.Style.cancel, handler:nil))
         present(settingsActionSheet, animated:true, completion:nil)
     }
     func photoFromLibrary() {
-           imagePicker.allowsEditing = true
-           imagePicker.sourceType = .photoLibrary
-           imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .savedPhotosAlbum)!
-           imagePicker.modalPresentationStyle = .popover
-           present(imagePicker, animated: true, completion: nil)
-       }
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .savedPhotosAlbum)!
+        imagePicker.modalPresentationStyle = .popover
+        present(imagePicker, animated: true, completion: nil)
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let videoUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
             print("videoUrl",videoUrl)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreateTweak" ) as! CreateTweakViewController
-            vc.galaryVideoUrl = "\(videoUrl)"
+            vc.galleryVideoUrl = "\(videoUrl)"
             self.navigationController?.pushViewController(vc, animated: true)
         }
         dismiss(animated:true, completion: nil)

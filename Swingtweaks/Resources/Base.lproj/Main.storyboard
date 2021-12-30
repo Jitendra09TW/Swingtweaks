@@ -49,7 +49,7 @@
                                     <action selector="recode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qai-7U-UBc"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW5-bf-L7P">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW5-bf-L7P">
                                 <rect key="frame" x="157.5" y="144" width="99" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
@@ -58,6 +58,11 @@
                                 <state key="normal" title="  Camera Roll  ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="btnCameraRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUp-KR-rMW"/>
                                 </connections>

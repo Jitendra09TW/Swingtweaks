@@ -64,6 +64,7 @@
 		88F628ED276B2D060056A87D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628EC276B2D060056A87D /* LoadingView.swift */; };
 		88F628F2276B73090056A87D /* AGAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628F1276B73090056A87D /* AGAudioRecorder.swift */; };
 		B71A54FF2775D4160017939E /* ImageToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A54FE2775D4160017939E /* ImageToVideo.swift */; };
+		B71ADD12277C2E6700BE8CC7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71ADD11277C2E6700BE8CC7 /* UIView+Extension.swift */; };
 		B7A9BE4F27732E1300A73E7F /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */; };
 		B7A9BE53277347C900A73E7F /* webVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = B7A9BE52277347C900A73E7F /* webVideo.mov */; };
 /* End PBXBuildFile section */
@@ -131,6 +132,7 @@
 		88F628EC276B2D060056A87D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		88F628F1276B73090056A87D /* AGAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAudioRecorder.swift; sourceTree = "<group>"; };
 		B71A54FE2775D4160017939E /* ImageToVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageToVideo.swift; sourceTree = "<group>"; };
+		B71ADD11277C2E6700BE8CC7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
 		B7A9BE52277347C900A73E7F /* webVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = webVideo.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,6 +337,7 @@
 				B7A9BE52277347C900A73E7F /* webVideo.mov */,
 				88F5A7742770B836008E77ED /* TempFile.m4a */,
 				889614EF276A06F200D59E02 /* demoAudio.mp3 */,
+				B71ADD11277C2E6700BE8CC7 /* UIView+Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				8884539D27720400001E22B9 /* ImmediatePanGestureRecognizer.swift in Sources */,
 				8884539E27720400001E22B9 /* Layout.swift in Sources */,
 				88F5A77227708CD6008E77ED /* AudioViewController.swift in Sources */,
+				B71ADD12277C2E6700BE8CC7 /* UIView+Extension.swift in Sources */,
 				8884538D27720400001E22B9 /* EllipseShape.swift in Sources */,
 				8884537E27720400001E22B9 /* TextShapeEditingView.swift in Sources */,
 				8884538827720400001E22B9 /* PenShape.swift in Sources */,
@@ -658,6 +662,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SZ7TCZZC57;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -681,6 +686,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SZ7TCZZC57;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

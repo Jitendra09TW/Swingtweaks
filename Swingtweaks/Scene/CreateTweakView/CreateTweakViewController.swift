@@ -83,16 +83,21 @@ class CreateTweakViewController: UIViewController {
 
     var imagePicker = UIImagePickerController()
     
-    var galaryVideoUrl = String()
+    var galleryVideoUrl = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SetUp()
+        if galleryVideoUrl.isEmpty == true {
+            self.localVideoSetUp()
+        }
+        else {
+            self.SetUpGalleryVideo()
+        }
     }
 }
 
 extension CreateTweakViewController{
-    private func SetUp() {
+    private func localVideoSetUp() {
          self.playLocalVideo()
         [btnBack, btnPlay, btnSpeed, btnRecord, btnLine, btnCircle, btnSquare, btnAnnotationShapes, btnZoom, btnColor, btnEraser, btnSpeedHalf, btnSpeedNormal, btnSpeedOneFourth, btnSpeedOneEight, btnSave, btnDrawLine].forEach {
             $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
@@ -107,9 +112,24 @@ extension CreateTweakViewController{
                                                name: .AVPlayerItemDidPlayToEndTime,
                                                object: self.player?.currentItem)
         
-//        if let gallUrl = galaryVideoUrl as? String {
-//            setVideo(url: URL(string: gallUrl)!)
-//        }
+    }
+    private func SetUpGalleryVideo() {
+        [btnBack, btnPlay, btnSpeed, btnRecord, btnLine, btnCircle, btnSquare, btnAnnotationShapes, btnZoom, btnColor, btnEraser, btnSpeedHalf, btnSpeedNormal, btnSpeedOneFourth, btnSpeedOneEight, btnSave, btnDrawLine].forEach {
+            $0?.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+        }
+        player?.addObserver(self, forKeyPath: "rate", options: [], context: nil)
+        player?.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+        playerController?.showsPlaybackControls = true
+        // Show topView
+        playerController?.hidesBottomBarWhenPushed = true
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(restartVideo),
+                                               name: .AVPlayerItemDidPlayToEndTime,
+                                               object: self.player?.currentItem)
+        
+        if let gallUrl = galleryVideoUrl as? String {
+            setVideo(url: URL(string: gallUrl)!)
+        }
     }
     
     @objc func restartVideo() {
@@ -149,6 +169,7 @@ extension CreateTweakViewController{
         player?.usesExternalPlaybackWhileExternalScreenIsActive = true
         self.videoView.addSubview((playerController?.view)!)
         playerController?.view.frame = CGRect(x: 0, y: 0, width: self.videoView.bounds.width, height: self.videoView.bounds.height)
+        print("playerControllerFrame",playerController?.view.frame)
         player?.currentItem?.audioTimePitchAlgorithm = .timeDomain
 
     }
@@ -208,14 +229,21 @@ extension CreateTweakViewController {
         case btnSpeedOneEight:
             speedSelectionAction(speedretio:8, speed: 1/8)
         case btnSave:
-            self.saveVideoSetup()
+            self.saveAction()
         case  btnDrawLine:
             self.drawLineAction()
         default:
             break
         }
     }
-    
+    func saveAction() {
+        if self.galleryVideoUrl.isEmpty == true {
+            saveVideoLocalSetup()
+        }
+        else {
+            self.saveVideoSetup()
+        }
+    }
 
 //    func createVideoWithImageArray() {
 //        DispatchQueue.main.async {
@@ -237,21 +265,30 @@ extension CreateTweakViewController {
     func saveVideoSetup() {
         if let imgRender = drawingView.render() {
             print("imgrender",imgRender)
-            guard let path = Bundle.main.path(forResource: "videoApp", ofType: "mov") else {
-                return
-            }
-            let videoURL = NSURL(fileURLWithPath: path)
-           // if let videoGallaryUrl = URL(string: galaryVideoUrl) {
-            self.editor.editVideo(fromVideoAt: videoURL as URL, drawImage: imgRender, drawingReact: self.drawingView.frame, videoReact: self.videoView.frame) { (exportedURL) in
+            if let videoGallaryUrl = URL(string: galleryVideoUrl) {
+            self.editor.editVideo(fromVideoAt: videoGallaryUrl as URL, drawImage: imgRender, drawingReact: self.drawingView.frame, videoReact: self.videoView.frame) { (exportedURL) in
                     print("exportedURL", exportedURL)
                     guard let newVideoURL = exportedURL else {
                         return
                     }
                     self.saveVideoToLibrary(exportedURL: newVideoURL)
-//                    self.saveVideoToAlbum(newVideoURL) { (error) in
-//                        print("ERRERERER",error)
-//                    }
-               // }
+                }
+            }
+        }
+    }
+    func saveVideoLocalSetup() {
+        if let imgRender = drawingView.render() {
+            print("imgrender",imgRender)
+            guard let path = Bundle.main.path(forResource: "videoApp", ofType: "mov") else {
+                return
+            }
+            let videoURL = NSURL(fileURLWithPath: path)
+            self.editor.editVideo(fromVideoAt: videoURL as URL, drawImage: imgRender, drawingReact: self.drawingView.frame, videoReact: self.videoView.frame) { (exportedURL) in
+                print("exportedURL", exportedURL)
+                guard let newVideoURL = exportedURL else {
+                    return
+                }
+                self.saveVideoToLibrary(exportedURL: newVideoURL)
             }
         }
     }
