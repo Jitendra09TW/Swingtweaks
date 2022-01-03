@@ -1,0 +1,16 @@
+PODS:
+  - VideoEditor (1.1)
+
+DEPENDENCIES:
+  - VideoEditor
+
+SPEC REPOS:
+  trunk:
+    - VideoEditor
+
+SPEC CHECKSUMS:
+  VideoEditor: bb7620300e53bd08bebfdab83eb5765921662e93
+
+PODFILE CHECKSUM: dfc6c7c86cdc80946d07acd05c7f26276efe8ad4
+
+COCOAPODS: 1.11.2

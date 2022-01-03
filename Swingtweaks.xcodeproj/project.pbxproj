@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245B8A99482F389CE726697A /* Pods_Swingtweaks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FA5178011CFC496B28516C /* Pods_Swingtweaks.framework */; };
 		8884534327720163001E22B9 /* videoApp.mov in Resources */ = {isa = PBXBuildFile; fileRef = 8884534227720163001E22B9 /* videoApp.mov */; };
 		8884537827720400001E22B9 /* DrawingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845348277203FF001E22B9 /* DrawingTool.swift */; };
 		8884537927720400001E22B9 /* DrawingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88845349277203FF001E22B9 /* DrawingOperations.swift */; };
@@ -46,8 +47,12 @@
 		8884539C27720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537527720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift */; };
 		8884539D27720400001E22B9 /* ImmediatePanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537627720400001E22B9 /* ImmediatePanGestureRecognizer.swift */; };
 		8884539E27720400001E22B9 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8884537727720400001E22B9 /* Layout.swift */; };
-		889614EB2769C88E00D59E02 /* VideoUltilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889614EA2769C88D00D59E02 /* VideoUltilities.swift */; };
 		889614F0276A06F200D59E02 /* demoAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 889614EF276A06F200D59E02 /* demoAudio.mp3 */; };
+		88AFA82B2775ADB600FFCE47 /* xmas.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 88AFA82A2775ADB600FFCE47 /* xmas.MOV */; };
+		88AFA82F2775AF3F00FFCE47 /* xmas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 88AFA82E2775AF3F00FFCE47 /* xmas.mp3 */; };
+		88B09718277DD08700C8781B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B09717277DD08700C8781B /* UIView+Extension.swift */; };
+		88B0971C277DE26F00C8781B /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B0971B277DE26F00C8781B /* VideoEditor.swift */; };
+		88B09726277DE73000C8781B /* ImageToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B09725277DE73000C8781B /* ImageToVideo.swift */; };
 		88BF91902761CD1000488A15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF918F2761CD1000488A15 /* AppDelegate.swift */; };
 		88BF91922761CD1000488A15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF91912761CD1000488A15 /* SceneDelegate.swift */; };
 		88BF91942761CD1000488A15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF91932761CD1000488A15 /* ViewController.swift */; };
@@ -55,7 +60,7 @@
 		88BF91992761CD3A00488A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF91982761CD3A00488A15 /* Assets.xcassets */; };
 		88BF919C2761CD3A00488A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BF919A2761CD3A00488A15 /* LaunchScreen.storyboard */; };
 		88BF91AD2761D20600488A15 /* CreateTweakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF91AC2761D20600488A15 /* CreateTweakViewController.swift */; };
-		88F5A77227708CD6008E77ED /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F5A77127708CD6008E77ED /* AudioViewController.swift */; };
+		88C9E47B277365E300DDAC57 /* videoApp.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 88C9E478277365E300DDAC57 /* videoApp.mp4 */; };
 		88F628E6276B2B4B0056A87D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 88F628DF276B2B4B0056A87D /* .gitkeep */; };
 		88F628E7276B2B4B0056A87D /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E0276B2B4B0056A87D /* VideoGenerator.swift */; };
 		88F628E8276B2B4B0056A87D /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E2276B2B4B0056A87D /* AVAssetExtension.swift */; };
@@ -63,13 +68,12 @@
 		88F628EA276B2B4B0056A87D /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628E5276B2B4B0056A87D /* VideoGeneratorError.swift */; };
 		88F628ED276B2D060056A87D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628EC276B2D060056A87D /* LoadingView.swift */; };
 		88F628F2276B73090056A87D /* AGAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F628F1276B73090056A87D /* AGAudioRecorder.swift */; };
-		B71A54FF2775D4160017939E /* ImageToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A54FE2775D4160017939E /* ImageToVideo.swift */; };
-		B71ADD12277C2E6700BE8CC7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71ADD11277C2E6700BE8CC7 /* UIView+Extension.swift */; };
-		B7A9BE4F27732E1300A73E7F /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */; };
-		B7A9BE53277347C900A73E7F /* webVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = B7A9BE52277347C900A73E7F /* webVideo.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A98992D7F0CB71404586297 /* Pods-Swingtweaks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swingtweaks.debug.xcconfig"; path = "Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks.debug.xcconfig"; sourceTree = "<group>"; };
+		45FA5178011CFC496B28516C /* Pods_Swingtweaks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swingtweaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		887DFE292771BCCA001BF968 /* videotemp.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videotemp.mp4; sourceTree = "<group>"; };
 		8884534227720163001E22B9 /* videoApp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = videoApp.mov; sourceTree = "<group>"; };
 		88845348277203FF001E22B9 /* DrawingTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingTool.swift; sourceTree = "<group>"; };
 		88845349277203FF001E22B9 /* DrawingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingOperations.swift; sourceTree = "<group>"; };
@@ -111,8 +115,12 @@
 		8884537527720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+DrawsanaExtensions.swift"; sourceTree = "<group>"; };
 		8884537627720400001E22B9 /* ImmediatePanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmediatePanGestureRecognizer.swift; sourceTree = "<group>"; };
 		8884537727720400001E22B9 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		889614EA2769C88D00D59E02 /* VideoUltilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoUltilities.swift; sourceTree = "<group>"; };
 		889614EF276A06F200D59E02 /* demoAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = demoAudio.mp3; sourceTree = "<group>"; };
+		88AFA82A2775ADB600FFCE47 /* xmas.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = xmas.MOV; sourceTree = "<group>"; };
+		88AFA82E2775AF3F00FFCE47 /* xmas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = xmas.mp3; sourceTree = "<group>"; };
+		88B09717277DD08700C8781B /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		88B0971B277DE26F00C8781B /* VideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
+		88B09725277DE73000C8781B /* ImageToVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageToVideo.swift; sourceTree = "<group>"; };
 		88BF918C2761CD1000488A15 /* Swingtweaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swingtweaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BF918F2761CD1000488A15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88BF91912761CD1000488A15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +130,7 @@
 		88BF919B2761CD3A00488A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88BF919D2761CD3A00488A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Swingtweaks/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		88BF91AC2761D20600488A15 /* CreateTweakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTweakViewController.swift; sourceTree = "<group>"; };
-		88F5A77127708CD6008E77ED /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		88C9E478277365E300DDAC57 /* videoApp.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoApp.mp4; sourceTree = SOURCE_ROOT; };
 		88F5A7742770B836008E77ED /* TempFile.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TempFile.m4a; sourceTree = "<group>"; };
 		88F628DF276B2B4B0056A87D /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		88F628E0276B2B4B0056A87D /* VideoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGenerator.swift; sourceTree = "<group>"; };
@@ -131,10 +139,7 @@
 		88F628E5276B2B4B0056A87D /* VideoGeneratorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGeneratorError.swift; sourceTree = "<group>"; };
 		88F628EC276B2D060056A87D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		88F628F1276B73090056A87D /* AGAudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAudioRecorder.swift; sourceTree = "<group>"; };
-		B71A54FE2775D4160017939E /* ImageToVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageToVideo.swift; sourceTree = "<group>"; };
-		B71ADD11277C2E6700BE8CC7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
-		B7A9BE52277347C900A73E7F /* webVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = webVideo.mov; sourceTree = "<group>"; };
+		BE694C8C617380F3F319A8B2 /* Pods-Swingtweaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swingtweaks.release.xcconfig"; path = "Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,12 +147,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245B8A99482F389CE726697A /* Pods_Swingtweaks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38C4D0D0CDC5643C447CE5DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A98992D7F0CB71404586297 /* Pods-Swingtweaks.debug.xcconfig */,
+				BE694C8C617380F3F319A8B2 /* Pods-Swingtweaks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		88845346277203FF001E22B9 /* Drawsana */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,22 +284,50 @@
 		889614E92769C88D00D59E02 /* SharedComponents */ = {
 			isa = PBXGroup;
 			children = (
+				88B09724277DE6ED00C8781B /* VideoFromFrames */,
+				88B0971A277DE22900C8781B /* AddOverlayFrameClass */,
+				88B09716277DD03500C8781B /* Extension */,
 				88845346277203FF001E22B9 /* Drawsana */,
 				8884537727720400001E22B9 /* Layout.swift */,
-				B7A9BE4E27732E1300A73E7F /* VideoEditor.swift */,
-				B71A54FE2775D4160017939E /* ImageToVideo.swift */,
 				88F628F0276B72EE0056A87D /* AudioRecorder */,
 				88F628DE276B2B4B0056A87D /* Classes */,
-				889614EA2769C88D00D59E02 /* VideoUltilities.swift */,
 			);
 			path = SharedComponents;
+			sourceTree = "<group>";
+		};
+		88B09716277DD03500C8781B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				88B09717277DD08700C8781B /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		88B0971A277DE22900C8781B /* AddOverlayFrameClass */ = {
+			isa = PBXGroup;
+			children = (
+				88B0971B277DE26F00C8781B /* VideoEditor.swift */,
+			);
+			path = AddOverlayFrameClass;
+			sourceTree = "<group>";
+		};
+		88B09724277DE6ED00C8781B /* VideoFromFrames */ = {
+			isa = PBXGroup;
+			children = (
+				88B09725277DE73000C8781B /* ImageToVideo.swift */,
+			);
+			path = VideoFromFrames;
 			sourceTree = "<group>";
 		};
 		88BF91832761CD1000488A15 = {
 			isa = PBXGroup;
 			children = (
 				88BF918E2761CD1000488A15 /* Swingtweaks */,
+				887DFE292771BCCA001BF968 /* videotemp.mp4 */,
+				88F5A7742770B836008E77ED /* TempFile.m4a */,
 				88BF918D2761CD1000488A15 /* Products */,
+				38C4D0D0CDC5643C447CE5DF /* Pods */,
+				A55F4C3668B460B0A021A911 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -311,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				88BF91932761CD1000488A15 /* ViewController.swift */,
-				88F5A77127708CD6008E77ED /* AudioViewController.swift */,
 				88BF91AA2761D19200488A15 /* CreateTweakView */,
 			);
 			path = Scene;
@@ -329,15 +371,15 @@
 		88BF91A82761CF5500488A15 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88C9E478277365E300DDAC57 /* videoApp.mp4 */,
 				88BF91952761CD1000488A15 /* Main.storyboard */,
 				88BF91982761CD3A00488A15 /* Assets.xcassets */,
 				88BF919A2761CD3A00488A15 /* LaunchScreen.storyboard */,
 				88BF919D2761CD3A00488A15 /* Info.plist */,
 				8884534227720163001E22B9 /* videoApp.mov */,
-				B7A9BE52277347C900A73E7F /* webVideo.mov */,
-				88F5A7742770B836008E77ED /* TempFile.m4a */,
+				88AFA82E2775AF3F00FFCE47 /* xmas.mp3 */,
+				88AFA82A2775ADB600FFCE47 /* xmas.MOV */,
 				889614EF276A06F200D59E02 /* demoAudio.mp3 */,
-				B71ADD11277C2E6700BE8CC7 /* UIView+Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -387,6 +429,14 @@
 			path = AudioRecorder;
 			sourceTree = "<group>";
 		};
+		A55F4C3668B460B0A021A911 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45FA5178011CFC496B28516C /* Pods_Swingtweaks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,9 +444,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88BF91A02761CD3A00488A15 /* Build configuration list for PBXNativeTarget "Swingtweaks" */;
 			buildPhases = (
+				9B043A1AD42D80EFEB130129 /* [CP] Check Pods Manifest.lock */,
 				88BF91882761CD1000488A15 /* Sources */,
 				88BF91892761CD1000488A15 /* Frameworks */,
 				88BF918A2761CD1000488A15 /* Resources */,
+				06730EC9A093F69D9E27743A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,15 +498,59 @@
 			files = (
 				88BF919C2761CD3A00488A15 /* LaunchScreen.storyboard in Resources */,
 				88BF91992761CD3A00488A15 /* Assets.xcassets in Resources */,
+				88C9E47B277365E300DDAC57 /* videoApp.mp4 in Resources */,
 				88F628E6276B2B4B0056A87D /* .gitkeep in Resources */,
+				88AFA82B2775ADB600FFCE47 /* xmas.MOV in Resources */,
+				88AFA82F2775AF3F00FFCE47 /* xmas.mp3 in Resources */,
 				889614F0276A06F200D59E02 /* demoAudio.mp3 in Resources */,
 				88BF91972761CD1000488A15 /* Main.storyboard in Resources */,
-				B7A9BE53277347C900A73E7F /* webVideo.mov in Resources */,
 				8884534327720163001E22B9 /* videoApp.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06730EC9A093F69D9E27743A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B043A1AD42D80EFEB130129 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swingtweaks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88BF91882761CD1000488A15 /* Sources */ = {
@@ -463,7 +559,7 @@
 			files = (
 				8884538B27720400001E22B9 /* TextShape.swift in Sources */,
 				8884539427720400001E22B9 /* ToolOperationContext.swift in Sources */,
-				B71A54FF2775D4160017939E /* ImageToVideo.swift in Sources */,
+				88B09726277DE73000C8781B /* ImageToVideo.swift in Sources */,
 				8884537F27720400001E22B9 /* TextTool.swift in Sources */,
 				8884539127720400001E22B9 /* DrawsanaView.swift in Sources */,
 				8884539027720400001E22B9 /* ColorPickerViewController.swift in Sources */,
@@ -473,7 +569,6 @@
 				8884539C27720400001E22B9 /* KeyedDecodingContainer+DrawsanaExtensions.swift in Sources */,
 				88BF91942761CD1000488A15 /* ViewController.swift in Sources */,
 				8884539627720400001E22B9 /* Drawing.swift in Sources */,
-				889614EB2769C88E00D59E02 /* VideoUltilities.swift in Sources */,
 				8884538E27720400001E22B9 /* AngleShape.swift in Sources */,
 				8884538327720400001E22B9 /* ArrowTool_EllipseTool_LineTool_RectTool.swift in Sources */,
 				8884539327720400001E22B9 /* ToolSettings.swift in Sources */,
@@ -484,15 +579,13 @@
 				8884537927720400001E22B9 /* DrawingOperations.swift in Sources */,
 				8884539827720400001E22B9 /* CGPoint+DrawsanaExtensions.swift in Sources */,
 				8884538227720400001E22B9 /* DrawingToolForShapeWithThreePoints.swift in Sources */,
-				B7A9BE4F27732E1300A73E7F /* VideoEditor.swift in Sources */,
+				88B0971C277DE26F00C8781B /* VideoEditor.swift in Sources */,
 				8884539727720400001E22B9 /* DrawsanaUtilities.swift in Sources */,
 				88F628ED276B2D060056A87D /* LoadingView.swift in Sources */,
 				8884537B27720400001E22B9 /* StarTool_PentagonTool_TriangleTool.swift in Sources */,
 				88F628E7276B2B4B0056A87D /* VideoGenerator.swift in Sources */,
 				8884539D27720400001E22B9 /* ImmediatePanGestureRecognizer.swift in Sources */,
 				8884539E27720400001E22B9 /* Layout.swift in Sources */,
-				88F5A77227708CD6008E77ED /* AudioViewController.swift in Sources */,
-				B71ADD12277C2E6700BE8CC7 /* UIView+Extension.swift in Sources */,
 				8884538D27720400001E22B9 /* EllipseShape.swift in Sources */,
 				8884537E27720400001E22B9 /* TextShapeEditingView.swift in Sources */,
 				8884538827720400001E22B9 /* PenShape.swift in Sources */,
@@ -513,6 +606,7 @@
 				8884538027720400001E22B9 /* PenTool_EraserTool.swift in Sources */,
 				8884538127720400001E22B9 /* DrawingToolForShapeWithTwoPoints.swift in Sources */,
 				88F628E9276B2B4B0056A87D /* ImageExtension.swift in Sources */,
+				88B09718277DD08700C8781B /* UIView+Extension.swift in Sources */,
 				8884538727720400001E22B9 /* LineShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,12 +751,12 @@
 		};
 		88BF91A12761CD3A00488A15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A98992D7F0CB71404586297 /* Pods-Swingtweaks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SZ7TCZZC57;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -670,10 +764,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.steven.swingtweaks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = SwingTweaks_Development_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = SwingTweaks_Distribution_Profile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -681,12 +774,12 @@
 		};
 		88BF91A22761CD3A00488A15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE694C8C617380F3F319A8B2 /* Pods-Swingtweaks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = SZ7TCZZC57;
 				INFOPLIST_FILE = Swingtweaks/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -694,10 +787,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.steven.swingtweaks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = SwingTweaks_Development_Profile;
+				PROVISIONING_PROFILE_SPECIFIER = SwingTweaks_Distribution_Profile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

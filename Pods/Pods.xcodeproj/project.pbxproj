@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3310DE61CCC47524FEF53DBBD4F4837C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3940813F7E8E8A71D5DEBD1B7868F07B /* VideoEditor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DBD0FAE36BA41D23BC0AAB0B0FA7B67 /* VideoEditor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51F1B873458FD75266FF7AB01907C9E0 /* Pods-Swingtweaks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE60F1EE9E82DCA3A154C5E644CBEAF3 /* Pods-Swingtweaks-dummy.m */; };
+		6DD35F57FBE9D3A00F7390887CB799F1 /* VideoEditor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E94C15C6E51443184C80CD54002B5377 /* VideoEditor-dummy.m */; };
+		7743A84F159AB65914C4B6C564946E78 /* Pods-Swingtweaks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C880A48C620CF17AA04B84736DC79830 /* Pods-Swingtweaks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E2099B083406814DD5AC15F9AA086B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		91C02BEA58245A555168422C4E58701A /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15834D41B11D0CA9AFCC3008D695E3 /* VideoEditor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1F1FAC65D159FE92C651D220E2C2B30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE5456290213704F4DBC8AE662C22D0A;
+			remoteInfo = VideoEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DBD0FAE36BA41D23BC0AAB0B0FA7B67 /* VideoEditor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VideoEditor-umbrella.h"; sourceTree = "<group>"; };
+		0DC6B0F4A6503849AC32F2E0A0987C1F /* Pods-Swingtweaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Swingtweaks.release.xcconfig"; sourceTree = "<group>"; };
+		1C74D301D9042845D0007B42BC9E1C36 /* Pods-Swingtweaks-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Swingtweaks-acknowledgements.plist"; sourceTree = "<group>"; };
+		700F7A9512FCE232942CD28186A1813F /* VideoEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VideoEditor.release.xcconfig; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		75448732D08BF199417DBA8AF81CF6AF /* Pods-Swingtweaks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Swingtweaks-Info.plist"; sourceTree = "<group>"; };
+		7552C02B73D9867EDD035A9F233D3896 /* Pods-Swingtweaks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Swingtweaks.debug.xcconfig"; sourceTree = "<group>"; };
+		774BBBF8D0FB499A3248CBD083F11B52 /* VideoEditor */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VideoEditor; path = VideoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8484CF682C8839B240BA6A8D3E710B27 /* Pods-Swingtweaks-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Swingtweaks-frameworks.sh"; sourceTree = "<group>"; };
+		8C0FB2C65300E33C54D737BD992D58DA /* Pods-Swingtweaks-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Swingtweaks-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DD4250A439B9FFACC9D8B30EC50CE01 /* VideoEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VideoEditor.debug.xcconfig; sourceTree = "<group>"; };
+		B2F526228D11EFF84A9384C1FA8035E0 /* Pods-Swingtweaks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Swingtweaks.modulemap"; sourceTree = "<group>"; };
+		C880A48C620CF17AA04B84736DC79830 /* Pods-Swingtweaks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Swingtweaks-umbrella.h"; sourceTree = "<group>"; };
+		C909BA072EFDA29CB4432D55BC216F18 /* VideoEditor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VideoEditor-prefix.pch"; sourceTree = "<group>"; };
+		CCE19FD42A2F055450B3FDE93C4E335E /* VideoEditor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VideoEditor-Info.plist"; sourceTree = "<group>"; };
+		CE60F1EE9E82DCA3A154C5E644CBEAF3 /* Pods-Swingtweaks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Swingtweaks-dummy.m"; sourceTree = "<group>"; };
+		D7C42115E8F3D4763F78C1EFA8CA26FE /* VideoEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VideoEditor.modulemap; sourceTree = "<group>"; };
+		E94C15C6E51443184C80CD54002B5377 /* VideoEditor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VideoEditor-dummy.m"; sourceTree = "<group>"; };
+		FC15834D41B11D0CA9AFCC3008D695E3 /* VideoEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoEditor.swift; path = VideoEditor/VideoEditor.swift; sourceTree = "<group>"; };
+		FE66AF70029C01755E687AAD186F980B /* Pods-Swingtweaks */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Swingtweaks"; path = Pods_Swingtweaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D9C8700F91072161C8E6533B465D281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3310DE61CCC47524FEF53DBBD4F4837C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54C7A99D1538BF16D4350B2080222C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E2099B083406814DD5AC15F9AA086B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1218A62F290468F34989ED1B55464779 /* VideoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				FC15834D41B11D0CA9AFCC3008D695E3 /* VideoEditor.swift */,
+				3D706331A1770E833892B09C716BCED7 /* Support Files */,
+			);
+			name = VideoEditor;
+			path = VideoEditor;
+			sourceTree = "<group>";
+		};
+		30620C358C4671252D7FC2942BAA1964 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C945BA3D1BDA1A81C4F213AE64343B3D /* Pods-Swingtweaks */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3D706331A1770E833892B09C716BCED7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7C42115E8F3D4763F78C1EFA8CA26FE /* VideoEditor.modulemap */,
+				E94C15C6E51443184C80CD54002B5377 /* VideoEditor-dummy.m */,
+				CCE19FD42A2F055450B3FDE93C4E335E /* VideoEditor-Info.plist */,
+				C909BA072EFDA29CB4432D55BC216F18 /* VideoEditor-prefix.pch */,
+				0DBD0FAE36BA41D23BC0AAB0B0FA7B67 /* VideoEditor-umbrella.h */,
+				9DD4250A439B9FFACC9D8B30EC50CE01 /* VideoEditor.debug.xcconfig */,
+				700F7A9512FCE232942CD28186A1813F /* VideoEditor.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VideoEditor";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6A1333676D75728C0844EFB5F79338F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE66AF70029C01755E687AAD186F980B /* Pods-Swingtweaks */,
+				774BBBF8D0FB499A3248CBD083F11B52 /* VideoEditor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCE7F109E756FCD4BB6989AC01681741 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1218A62F290468F34989ED1B55464779 /* VideoEditor */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C945BA3D1BDA1A81C4F213AE64343B3D /* Pods-Swingtweaks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F526228D11EFF84A9384C1FA8035E0 /* Pods-Swingtweaks.modulemap */,
+				8C0FB2C65300E33C54D737BD992D58DA /* Pods-Swingtweaks-acknowledgements.markdown */,
+				1C74D301D9042845D0007B42BC9E1C36 /* Pods-Swingtweaks-acknowledgements.plist */,
+				CE60F1EE9E82DCA3A154C5E644CBEAF3 /* Pods-Swingtweaks-dummy.m */,
+				8484CF682C8839B240BA6A8D3E710B27 /* Pods-Swingtweaks-frameworks.sh */,
+				75448732D08BF199417DBA8AF81CF6AF /* Pods-Swingtweaks-Info.plist */,
+				C880A48C620CF17AA04B84736DC79830 /* Pods-Swingtweaks-umbrella.h */,
+				7552C02B73D9867EDD035A9F233D3896 /* Pods-Swingtweaks.debug.xcconfig */,
+				0DC6B0F4A6503849AC32F2E0A0987C1F /* Pods-Swingtweaks.release.xcconfig */,
+			);
+			name = "Pods-Swingtweaks";
+			path = "Target Support Files/Pods-Swingtweaks";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				BCE7F109E756FCD4BB6989AC01681741 /* Pods */,
+				6A1333676D75728C0844EFB5F79338F1 /* Products */,
+				30620C358C4671252D7FC2942BAA1964 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B72A40A56DCBA2CF57FCB0EE57972066 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7743A84F159AB65914C4B6C564946E78 /* Pods-Swingtweaks-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEFA9A0F7B3AB72003A243C8550289FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3940813F7E8E8A71D5DEBD1B7868F07B /* VideoEditor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8CFF24FB332AEA7857EDE786FBC22011 /* Pods-Swingtweaks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A9059870344090B36E5CB33CC0DD651 /* Build configuration list for PBXNativeTarget "Pods-Swingtweaks" */;
+			buildPhases = (
+				B72A40A56DCBA2CF57FCB0EE57972066 /* Headers */,
+				BAC3C1D58CC5339556A46EB55327E5BF /* Sources */,
+				C54C7A99D1538BF16D4350B2080222C0 /* Frameworks */,
+				61CF8106892FC28831A28CF655A3E21A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8514D0D2DBB32FC9DFD5C986208001FD /* PBXTargetDependency */,
+			);
+			name = "Pods-Swingtweaks";
+			productName = Pods_Swingtweaks;
+			productReference = FE66AF70029C01755E687AAD186F980B /* Pods-Swingtweaks */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE5456290213704F4DBC8AE662C22D0A /* VideoEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC16998003DBA4579B9F6D69DD210891 /* Build configuration list for PBXNativeTarget "VideoEditor" */;
+			buildPhases = (
+				DEFA9A0F7B3AB72003A243C8550289FF /* Headers */,
+				8AF988C4EDCF950DCB53179E8B39F0C6 /* Sources */,
+				3D9C8700F91072161C8E6533B465D281 /* Frameworks */,
+				696299AA2AB3B18CBFE3E423ABF0AF7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoEditor;
+			productName = VideoEditor;
+			productReference = 774BBBF8D0FB499A3248CBD083F11B52 /* VideoEditor */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 6A1333676D75728C0844EFB5F79338F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CFF24FB332AEA7857EDE786FBC22011 /* Pods-Swingtweaks */,
+				DE5456290213704F4DBC8AE662C22D0A /* VideoEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61CF8106892FC28831A28CF655A3E21A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		696299AA2AB3B18CBFE3E423ABF0AF7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AF988C4EDCF950DCB53179E8B39F0C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C02BEA58245A555168422C4E58701A /* VideoEditor.swift in Sources */,
+				6DD35F57FBE9D3A00F7390887CB799F1 /* VideoEditor-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC3C1D58CC5339556A46EB55327E5BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F1B873458FD75266FF7AB01907C9E0 /* Pods-Swingtweaks-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8514D0D2DBB32FC9DFD5C986208001FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VideoEditor;
+			target = DE5456290213704F4DBC8AE662C22D0A /* VideoEditor */;
+			targetProxy = A1F1FAC65D159FE92C651D220E2C2B30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E879161EDD68931825D9ED3508B45F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7552C02B73D9867EDD035A9F233D3896 /* Pods-Swingtweaks.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		730C8C33611D615F94A11BFFFE35F41E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD4250A439B9FFACC9D8B30EC50CE01 /* VideoEditor.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VideoEditor/VideoEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VideoEditor/VideoEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/VideoEditor/VideoEditor.modulemap";
+				PRODUCT_MODULE_NAME = VideoEditor;
+				PRODUCT_NAME = VideoEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A03A13A8510A7CFA32F8793ECBC5F3F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 700F7A9512FCE232942CD28186A1813F /* VideoEditor.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VideoEditor/VideoEditor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VideoEditor/VideoEditor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/VideoEditor/VideoEditor.modulemap";
+				PRODUCT_MODULE_NAME = VideoEditor;
+				PRODUCT_NAME = VideoEditor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D503256F7CC2B45FE733D65EFA585E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC6B0F4A6503849AC32F2E0A0987C1F /* Pods-Swingtweaks.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Swingtweaks/Pods-Swingtweaks.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A9059870344090B36E5CB33CC0DD651 /* Build configuration list for PBXNativeTarget "Pods-Swingtweaks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E879161EDD68931825D9ED3508B45F9 /* Debug */,
+				D503256F7CC2B45FE733D65EFA585E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC16998003DBA4579B9F6D69DD210891 /* Build configuration list for PBXNativeTarget "VideoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730C8C33611D615F94A11BFFFE35F41E /* Debug */,
+				A03A13A8510A7CFA32F8793ECBC5F3F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
