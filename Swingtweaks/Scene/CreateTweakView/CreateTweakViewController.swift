@@ -81,6 +81,10 @@ class CreateTweakViewController: UIViewController {
     var isToolAdded:Bool = false
     var value:Float64 = 0.0
     
+    private var isSeekInProgress = false
+    private var chaseTime = CMTime.zero
+    private var preferredFrameRate: Float = 0.0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,14 +92,15 @@ class CreateTweakViewController: UIViewController {
         playBackSlider.maximumValue = 1.0
         playBackSlider.isContinuous = true
         self.lastValue = playBackSlider.value
+        getTotalFramesCount(videoUrl: videoUrl!)
         SetUp()
         btnSave.isUserInteractionEnabled = false
         self.showHideBottomTopView(isHidden: true)
-        playBackSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
+       // playBackSlider.addTarget(self, action: #selector(onSliderValChanged(slider:event:)), for: .valueChanged)
         
     }
     @IBAction func playSliderValueChanged(_ sender: UISlider) {
-        // self.seekSliderDragged(seekSlider: sender)
+         self.seekSliderDragged(seekSlider: sender)
     }
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
@@ -207,6 +212,22 @@ extension CreateTweakViewController{
         self.videoView.addSubview((playerController?.view)!)
         playerController?.view.frame = CGRect(x: 0, y: 0, width: self.videoView.bounds.width, height: self.videoView.bounds.height)
         player?.currentItem?.audioTimePitchAlgorithm = .timeDomain
+    }
+    func getTotalFramesCount(videoUrl: URL) {
+        let asset = AVURLAsset(url: videoUrl, options: nil)
+        let tracks = asset.tracks(withMediaType: .video)
+        if let framePerSeconds = tracks.first?.nominalFrameRate {
+            print("FramePerSeconds", framePerSeconds)
+            self.preferredFrameRate = framePerSeconds
+            if let duration = self.player?.currentItem?.asset.duration {
+                let totalSeconds = CMTimeGetSeconds(duration)
+               // self.totalVideoDuration = Float(totalSeconds)
+                print("TotalDurationSeconds :: \(totalSeconds)")
+               // self.totalFramesPerSeconds = Float(totalSeconds) * framePerSeconds
+                let totalFrames = Float(totalSeconds) * framePerSeconds
+                print("Total frames", totalFrames)
+            }
+        }
     }
 }
 
@@ -388,8 +409,8 @@ extension CreateTweakViewController {
         player?.currentItem?.step(byCount: -1)
     }
     func setSeekBarSetup() {
-        let interval = CMTime(seconds: 0.1,
-                              preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        let interval = CMTime(seconds: 0.001,
+                              preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
         let mainQueue = DispatchQueue.main
         self.playerController?.player?.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue, using: { [weak self] (currentTime) in
             let currentSeconds = CMTimeGetSeconds(currentTime)
@@ -397,6 +418,7 @@ extension CreateTweakViewController {
             let totalSeconds = CMTimeGetSeconds(duration)
             self?.lblVideoStartTime.text = String(format: "%.3f", currentSeconds)
             let progress: Float = Float(currentSeconds/totalSeconds)
+            print("playBackSlider value",progress)
             self?.playBackSlider.value = Float (progress)
         })
     }
@@ -407,12 +429,18 @@ extension CreateTweakViewController {
             let totalSeconds = CMTimeGetSeconds(duration)
             let value = Float64(seekSlider.value) * totalSeconds
             self.lblVideoStartTime.text = String(format: "%.3f", value)
-            
             let seekTime = CMTime(value: CMTimeValue(Float64(value)), timescale: 1)
-            player?.seek(to: seekTime, completionHandler: { (completedSeek) in
-                self.player?.pause()
-                self.btnSeekPlay.isSelected = false
-            })
+//            player?.seek(to: seekTime, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero, completionHandler: { (completedSeek) in
+//                self.player?.pause()
+//                self.btnSeekPlay.isSelected = false
+//            })
+            
+//            player?.seek(to: seekTime, completionHandler: { (completedSeek) in
+//                self.player?.pause()
+//                self.btnSeekPlay.isSelected = false
+//            })
+            
+            self.stepByFrame(in: .forward)
         }
     }
     
@@ -476,6 +504,60 @@ extension CreateTweakViewController {
         self.navigationController?.present(previewViewController, animated: true, completion: nil)
     }
     
+}
+extension CreateTweakViewController {
+    public enum Direction {
+        case forward
+        case backward
+    }
+
+    public func seekWithFrame(to time: CMTime) {
+        seekSmoothlyToTime(newChaseTime: time)
+    }
+    func stepByFrame(in direction: Direction) {
+        let frameRate = 20.0
+            ?? player?.currentItem?.tracks
+            .first(where: { $0.assetTrack?.mediaType == .video })?
+                .currentVideoFrameRate
+            ?? -1
+
+        let time = player?.currentItem?.currentTime() ?? CMTime.zero
+        let seconds = Double(1) / Double(frameRate)
+        let timescale = Double(seconds) / Double(time.timescale) < 1 ? 600 : time.timescale
+        let oneFrame = CMTime(seconds: seconds, preferredTimescale: timescale)
+        let next = direction == .forward
+            ? CMTimeAdd(time, oneFrame)
+            : CMTimeSubtract(time, oneFrame)
+
+        seekSmoothlyToTime(newChaseTime: next)
+    }
+    func actuallySeekToTime() {
+        isSeekInProgress = true
+        let seekTimeInProgress = chaseTime
+
+        player?.seek(to: seekTimeInProgress, toleranceBefore: CMTime.zero, toleranceAfter: CMTime.zero) { [weak self] _ in
+            guard let self = self else { return }
+
+            if CMTimeCompare(seekTimeInProgress, self.chaseTime) == 0 {
+                self.isSeekInProgress = false
+            } else {
+                self.trySeekToChaseTime()
+            }
+        }
+    }
+    private func trySeekToChaseTime() {
+        guard player?.status == .readyToPlay else { return }
+        actuallySeekToTime()
+    }
+    func seekSmoothlyToTime(newChaseTime: CMTime) {
+        if CMTimeCompare(newChaseTime, chaseTime) != 0 {
+            chaseTime = newChaseTime
+
+            if !isSeekInProgress {
+                trySeekToChaseTime()
+            }
+        }
+    }
 }
 extension CreateTweakViewController {
     func toolsSetup(toolIndex: Int) {
